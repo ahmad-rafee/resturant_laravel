@@ -1,0 +1,4522 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Resturant",
+        "description": "",
+        "version": "1.0.0"
+    },
+    "host": "http:\/\/127.0.0.1:8000",
+    "basePath": "\/",
+    "paths": {
+        "\/request-docs": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/laravel-websockets": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/laravel-websockets\/api\/{appId}\/statistics": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "appId",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/laravel-websockets\/auth": {
+            "post": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/laravel-websockets\/event": {
+            "post": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/laravel-websockets\/statistics": {
+            "post": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/sanctum\/csrf-cookie": {
+            "get": {
+                "summary": "Return an empty response simply to trigger the storage of the CSRF cookie in the browser.",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/api\/user": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/api\/category": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "post": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "CAT_ArbName",
+                                "CAT_EngName",
+                                "CAT_Order",
+                                "CAT_Status",
+                                "CAT_Notes"
+                            ],
+                            "properties": {
+                                "CAT_ArbName": {
+                                    "type": "string"
+                                },
+                                "CAT_EngName": {
+                                    "type": "string"
+                                },
+                                "CAT_Order": {
+                                    "type": "string"
+                                },
+                                "CAT_Status": {
+                                    "type": "string"
+                                },
+                                "CAT_Notes": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "\/api\/category\/{category}": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "category",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            },
+            "put": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "category",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "CAT_ID",
+                                "CAT_ArbName",
+                                "CAT_EngName",
+                                "CAT_Order",
+                                "CAT_Status",
+                                "CAT_Notes"
+                            ],
+                            "properties": {
+                                "CAT_ID": {
+                                    "type": "string"
+                                },
+                                "CAT_ArbName": {
+                                    "type": "string"
+                                },
+                                "CAT_EngName": {
+                                    "type": "string"
+                                },
+                                "CAT_Order": {
+                                    "type": "string"
+                                },
+                                "CAT_Status": {
+                                    "type": "string"
+                                },
+                                "CAT_Notes": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "category",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "CAT_ID",
+                                "CAT_ArbName",
+                                "CAT_EngName",
+                                "CAT_Order",
+                                "CAT_Status",
+                                "CAT_Notes"
+                            ],
+                            "properties": {
+                                "CAT_ID": {
+                                    "type": "string"
+                                },
+                                "CAT_ArbName": {
+                                    "type": "string"
+                                },
+                                "CAT_EngName": {
+                                    "type": "string"
+                                },
+                                "CAT_Order": {
+                                    "type": "string"
+                                },
+                                "CAT_Status": {
+                                    "type": "string"
+                                },
+                                "CAT_Notes": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "category",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/decor_type": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "post": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "DTYP_Name",
+                                "DTTYP_Name",
+                                "DTYP_Description",
+                                "DTYP_Logo",
+                                "DTYP_CanReserve"
+                            ],
+                            "properties": {
+                                "DTYP_Name": {
+                                    "type": "string"
+                                },
+                                "DTTYP_Name": {
+                                    "type": "string"
+                                },
+                                "DTYP_Description": {
+                                    "type": "string"
+                                },
+                                "DTYP_Logo": {
+                                    "type": "string"
+                                },
+                                "DTYP_CanReserve": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "\/api\/decor_type\/{decor_type}": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "decor_type",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            },
+            "put": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "decor_type",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "DTYP_Name",
+                                "DTTYP_Name",
+                                "DTYP_Description",
+                                "DTYP_Logo",
+                                "DTYP_CanReserve"
+                            ],
+                            "properties": {
+                                "DTYP_Name": {
+                                    "type": "string"
+                                },
+                                "DTTYP_Name": {
+                                    "type": "string"
+                                },
+                                "DTYP_Description": {
+                                    "type": "string"
+                                },
+                                "DTYP_Logo": {
+                                    "type": "string"
+                                },
+                                "DTYP_CanReserve": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "decor_type",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "DTYP_Name",
+                                "DTTYP_Name",
+                                "DTYP_Description",
+                                "DTYP_Logo",
+                                "DTYP_CanReserve"
+                            ],
+                            "properties": {
+                                "DTYP_Name": {
+                                    "type": "string"
+                                },
+                                "DTTYP_Name": {
+                                    "type": "string"
+                                },
+                                "DTYP_Description": {
+                                    "type": "string"
+                                },
+                                "DTYP_Logo": {
+                                    "type": "string"
+                                },
+                                "DTYP_CanReserve": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "decor_type",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/discount": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "post": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "DISC_DESCIPTION",
+                                "DISC_TYPE",
+                                "DISC_STATUS",
+                                "DISC_STARTE_DATE",
+                                "DISC_END_DATE",
+                                "DISC_VALUE",
+                                "DISC_PCT",
+                                "DISC_PRICE_LIST",
+                                "DISC_USER_ROLE",
+                                "DISC_APPLAY_TO"
+                            ],
+                            "properties": {
+                                "DISC_DESCIPTION": {
+                                    "type": "string"
+                                },
+                                "DISC_TYPE": {
+                                    "type": "string"
+                                },
+                                "DISC_STATUS": {
+                                    "type": "string"
+                                },
+                                "DISC_STARTE_DATE": {
+                                    "type": "string"
+                                },
+                                "DISC_END_DATE": {
+                                    "type": "string"
+                                },
+                                "DISC_VALUE": {
+                                    "type": "string"
+                                },
+                                "DISC_PCT": {
+                                    "type": "string"
+                                },
+                                "DISC_PRICE_LIST": {
+                                    "type": "string"
+                                },
+                                "DISC_USER_ROLE": {
+                                    "type": "string"
+                                },
+                                "DISC_APPLAY_TO": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "\/api\/discount\/{discount}": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "discount",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            },
+            "put": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "discount",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "DISC_DESCIPTION",
+                                "DISC_TYPE",
+                                "DISC_STATUS",
+                                "DISC_STARTE_DATE",
+                                "DISC_END_DATE",
+                                "DISC_VALUE",
+                                "DISC_PCT",
+                                "DISC_PRICE_LIST",
+                                "DISC_USER_ROLE",
+                                "DISC_APPLAY_TO"
+                            ],
+                            "properties": {
+                                "DISC_DESCIPTION": {
+                                    "type": "string"
+                                },
+                                "DISC_TYPE": {
+                                    "type": "string"
+                                },
+                                "DISC_STATUS": {
+                                    "type": "string"
+                                },
+                                "DISC_STARTE_DATE": {
+                                    "type": "string"
+                                },
+                                "DISC_END_DATE": {
+                                    "type": "string"
+                                },
+                                "DISC_VALUE": {
+                                    "type": "string"
+                                },
+                                "DISC_PCT": {
+                                    "type": "string"
+                                },
+                                "DISC_PRICE_LIST": {
+                                    "type": "string"
+                                },
+                                "DISC_USER_ROLE": {
+                                    "type": "string"
+                                },
+                                "DISC_APPLAY_TO": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "discount",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "DISC_DESCIPTION",
+                                "DISC_TYPE",
+                                "DISC_STATUS",
+                                "DISC_STARTE_DATE",
+                                "DISC_END_DATE",
+                                "DISC_VALUE",
+                                "DISC_PCT",
+                                "DISC_PRICE_LIST",
+                                "DISC_USER_ROLE",
+                                "DISC_APPLAY_TO"
+                            ],
+                            "properties": {
+                                "DISC_DESCIPTION": {
+                                    "type": "string"
+                                },
+                                "DISC_TYPE": {
+                                    "type": "string"
+                                },
+                                "DISC_STATUS": {
+                                    "type": "string"
+                                },
+                                "DISC_STARTE_DATE": {
+                                    "type": "string"
+                                },
+                                "DISC_END_DATE": {
+                                    "type": "string"
+                                },
+                                "DISC_VALUE": {
+                                    "type": "string"
+                                },
+                                "DISC_PCT": {
+                                    "type": "string"
+                                },
+                                "DISC_PRICE_LIST": {
+                                    "type": "string"
+                                },
+                                "DISC_USER_ROLE": {
+                                    "type": "string"
+                                },
+                                "DISC_APPLAY_TO": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "discount",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/discount_user": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "post": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "DISU_SERIAL",
+                                "DISU_USER_ID_TYPE",
+                                "DISU_USER_ID"
+                            ],
+                            "properties": {
+                                "DISU_SERIAL": {
+                                    "type": "string"
+                                },
+                                "DISU_USER_ID_TYPE": {
+                                    "type": "string"
+                                },
+                                "DISU_USER_ID": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "\/api\/discount_user\/{discount_user}": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "discount_user",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            },
+            "put": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "discount_user",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "DISU_SERIAL",
+                                "DISU_USER_ID_TYPE",
+                                "DISU_USER_ID"
+                            ],
+                            "properties": {
+                                "DISU_SERIAL": {
+                                    "type": "string"
+                                },
+                                "DISU_USER_ID_TYPE": {
+                                    "type": "string"
+                                },
+                                "DISU_USER_ID": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "discount_user",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "DISU_SERIAL",
+                                "DISU_USER_ID_TYPE",
+                                "DISU_USER_ID"
+                            ],
+                            "properties": {
+                                "DISU_SERIAL": {
+                                    "type": "string"
+                                },
+                                "DISU_USER_ID_TYPE": {
+                                    "type": "string"
+                                },
+                                "DISU_USER_ID": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "discount_user",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/hall": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "post": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "HALL_Name",
+                                "HALL_Status",
+                                "HALL_Description",
+                                "HALL_Notes"
+                            ],
+                            "properties": {
+                                "HALL_Name": {
+                                    "type": "string"
+                                },
+                                "HALL_Status": {
+                                    "type": "string"
+                                },
+                                "HALL_Description": {
+                                    "type": "string"
+                                },
+                                "HALL_Notes": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "\/api\/hall\/{hall}": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "hall",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            },
+            "put": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "hall",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "HALL_Name",
+                                "HALL_Status",
+                                "HALL_Description",
+                                "HALL_Notes"
+                            ],
+                            "properties": {
+                                "HALL_Name": {
+                                    "type": "string"
+                                },
+                                "HALL_Status": {
+                                    "type": "string"
+                                },
+                                "HALL_Description": {
+                                    "type": "string"
+                                },
+                                "HALL_Notes": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "hall",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "HALL_Name",
+                                "HALL_Status",
+                                "HALL_Description",
+                                "HALL_Notes"
+                            ],
+                            "properties": {
+                                "HALL_Name": {
+                                    "type": "string"
+                                },
+                                "HALL_Status": {
+                                    "type": "string"
+                                },
+                                "HALL_Description": {
+                                    "type": "string"
+                                },
+                                "HALL_Notes": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "hall",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/hall_decor": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "post": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "DEC_HALLID",
+                                "DEC_TableNo",
+                                "DEC_Name",
+                                "DEC_TypeID",
+                                "DEC_Status",
+                                "DEC_Image",
+                                "DEC_Left",
+                                "DEC_Top"
+                            ],
+                            "properties": {
+                                "DEC_HALLID": {
+                                    "type": "string"
+                                },
+                                "DEC_TableNo": {
+                                    "type": "string"
+                                },
+                                "DEC_Name": {
+                                    "type": "string"
+                                },
+                                "DEC_TypeID": {
+                                    "type": "string"
+                                },
+                                "DEC_Status": {
+                                    "type": "string"
+                                },
+                                "DEC_Image": {
+                                    "type": "string"
+                                },
+                                "DEC_Left": {
+                                    "type": "string"
+                                },
+                                "DEC_Top": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "\/api\/hall_decor\/{hall_decor}": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "hall_decor",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            },
+            "put": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "hall_decor",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "DEC_HALLID",
+                                "DEC_TableNo",
+                                "DEC_Name",
+                                "DEC_TypeID",
+                                "DEC_Status",
+                                "DEC_Image",
+                                "DEC_Left",
+                                "DEC_Top"
+                            ],
+                            "properties": {
+                                "DEC_HALLID": {
+                                    "type": "string"
+                                },
+                                "DEC_TableNo": {
+                                    "type": "string"
+                                },
+                                "DEC_Name": {
+                                    "type": "string"
+                                },
+                                "DEC_TypeID": {
+                                    "type": "string"
+                                },
+                                "DEC_Status": {
+                                    "type": "string"
+                                },
+                                "DEC_Image": {
+                                    "type": "string"
+                                },
+                                "DEC_Left": {
+                                    "type": "string"
+                                },
+                                "DEC_Top": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "hall_decor",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "DEC_HALLID",
+                                "DEC_TableNo",
+                                "DEC_Name",
+                                "DEC_TypeID",
+                                "DEC_Status",
+                                "DEC_Image",
+                                "DEC_Left",
+                                "DEC_Top"
+                            ],
+                            "properties": {
+                                "DEC_HALLID": {
+                                    "type": "string"
+                                },
+                                "DEC_TableNo": {
+                                    "type": "string"
+                                },
+                                "DEC_Name": {
+                                    "type": "string"
+                                },
+                                "DEC_TypeID": {
+                                    "type": "string"
+                                },
+                                "DEC_Status": {
+                                    "type": "string"
+                                },
+                                "DEC_Image": {
+                                    "type": "string"
+                                },
+                                "DEC_Left": {
+                                    "type": "string"
+                                },
+                                "DEC_Top": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "hall_decor",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/image": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "post": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "IMG_DESCRIPTION",
+                                "IMG_DATA",
+                                "IMG_CREATE_DATE",
+                                "IMG_USER_UPLOAD",
+                                "IMG_TYPE"
+                            ],
+                            "properties": {
+                                "IMG_DESCRIPTION": {
+                                    "type": "string"
+                                },
+                                "IMG_DATA": {
+                                    "type": "string"
+                                },
+                                "IMG_CREATE_DATE": {
+                                    "type": "string"
+                                },
+                                "IMG_USER_UPLOAD": {
+                                    "type": "string"
+                                },
+                                "IMG_TYPE": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "\/api\/image\/{image}": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "image",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            },
+            "put": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "image",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "IMG_DESCRIPTION",
+                                "IMG_DATA",
+                                "IMG_CREATE_DATE",
+                                "IMG_USER_UPLOAD",
+                                "IMG_TYPE"
+                            ],
+                            "properties": {
+                                "IMG_DESCRIPTION": {
+                                    "type": "string"
+                                },
+                                "IMG_DATA": {
+                                    "type": "string"
+                                },
+                                "IMG_CREATE_DATE": {
+                                    "type": "string"
+                                },
+                                "IMG_USER_UPLOAD": {
+                                    "type": "string"
+                                },
+                                "IMG_TYPE": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "image",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "IMG_DESCRIPTION",
+                                "IMG_DATA",
+                                "IMG_CREATE_DATE",
+                                "IMG_USER_UPLOAD",
+                                "IMG_TYPE"
+                            ],
+                            "properties": {
+                                "IMG_DESCRIPTION": {
+                                    "type": "string"
+                                },
+                                "IMG_DATA": {
+                                    "type": "string"
+                                },
+                                "IMG_CREATE_DATE": {
+                                    "type": "string"
+                                },
+                                "IMG_USER_UPLOAD": {
+                                    "type": "string"
+                                },
+                                "IMG_TYPE": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "image",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/kitchen": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "post": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "KTC_NAME",
+                                "KTC_Status",
+                                "KTC_Description",
+                                "KTC_Notes"
+                            ],
+                            "properties": {
+                                "KTC_NAME": {
+                                    "type": "string"
+                                },
+                                "KTC_Status": {
+                                    "type": "string"
+                                },
+                                "KTC_Description": {
+                                    "type": "string"
+                                },
+                                "KTC_Notes": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "\/api\/kitchen\/{kitchen}": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "kitchen",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            },
+            "put": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "kitchen",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "KTC_NAME",
+                                "KTC_Status",
+                                "KTC_Description",
+                                "KTC_Notes"
+                            ],
+                            "properties": {
+                                "KTC_NAME": {
+                                    "type": "string"
+                                },
+                                "KTC_Status": {
+                                    "type": "string"
+                                },
+                                "KTC_Description": {
+                                    "type": "string"
+                                },
+                                "KTC_Notes": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "kitchen",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "KTC_NAME",
+                                "KTC_Status",
+                                "KTC_Description",
+                                "KTC_Notes"
+                            ],
+                            "properties": {
+                                "KTC_NAME": {
+                                    "type": "string"
+                                },
+                                "KTC_Status": {
+                                    "type": "string"
+                                },
+                                "KTC_Description": {
+                                    "type": "string"
+                                },
+                                "KTC_Notes": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "kitchen",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/meal_content": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "post": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "MCT_MealID",
+                                "MCT_ItemNo",
+                                "MCT_StoreNo",
+                                "MCT_Quantity",
+                                "MCT_UnitNo",
+                                "MCT_Notes"
+                            ],
+                            "properties": {
+                                "MCT_MealID": {
+                                    "type": "string"
+                                },
+                                "MCT_ItemNo": {
+                                    "type": "string"
+                                },
+                                "MCT_StoreNo": {
+                                    "type": "string"
+                                },
+                                "MCT_Quantity": {
+                                    "type": "string"
+                                },
+                                "MCT_UnitNo": {
+                                    "type": "string"
+                                },
+                                "MCT_Notes": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "\/api\/meal_content\/{meal_content}": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "meal_content",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            },
+            "put": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "meal_content",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "MCT_MealID",
+                                "MCT_ItemNo",
+                                "MCT_StoreNo",
+                                "MCT_Quantity",
+                                "MCT_UnitNo",
+                                "MCT_Notes"
+                            ],
+                            "properties": {
+                                "MCT_MealID": {
+                                    "type": "string"
+                                },
+                                "MCT_ItemNo": {
+                                    "type": "string"
+                                },
+                                "MCT_StoreNo": {
+                                    "type": "string"
+                                },
+                                "MCT_Quantity": {
+                                    "type": "string"
+                                },
+                                "MCT_UnitNo": {
+                                    "type": "string"
+                                },
+                                "MCT_Notes": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "meal_content",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "MCT_MealID",
+                                "MCT_ItemNo",
+                                "MCT_StoreNo",
+                                "MCT_Quantity",
+                                "MCT_UnitNo",
+                                "MCT_Notes"
+                            ],
+                            "properties": {
+                                "MCT_MealID": {
+                                    "type": "string"
+                                },
+                                "MCT_ItemNo": {
+                                    "type": "string"
+                                },
+                                "MCT_StoreNo": {
+                                    "type": "string"
+                                },
+                                "MCT_Quantity": {
+                                    "type": "string"
+                                },
+                                "MCT_UnitNo": {
+                                    "type": "string"
+                                },
+                                "MCT_Notes": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "meal_content",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/meal": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "post": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "MEL_ArbName",
+                                "MEL_EngName",
+                                "MEL_CatID",
+                                "MEL_Order",
+                                "MEL_Price",
+                                "MEL_Logo",
+                                "MEL_Desc",
+                                "MEL_DefaultKitchen",
+                                "MEL_Status",
+                                "MEL_Price2"
+                            ],
+                            "properties": {
+                                "MEL_ArbName": {
+                                    "type": "string"
+                                },
+                                "MEL_EngName": {
+                                    "type": "string"
+                                },
+                                "MEL_CatID": {
+                                    "type": "string"
+                                },
+                                "MEL_Order": {
+                                    "type": "string"
+                                },
+                                "MEL_Price": {
+                                    "type": "string"
+                                },
+                                "MEL_Logo": {
+                                    "type": "string"
+                                },
+                                "MEL_Desc": {
+                                    "type": "string"
+                                },
+                                "MEL_DefaultKitchen": {
+                                    "type": "string"
+                                },
+                                "MEL_Status": {
+                                    "type": "string"
+                                },
+                                "MEL_Price2": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "\/api\/meal\/{meal}": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "meal",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            },
+            "put": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "meal",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "MEL_ArbName",
+                                "MEL_EngName",
+                                "MEL_CatID",
+                                "MEL_Order",
+                                "MEL_Price",
+                                "MEL_Logo",
+                                "MEL_Desc",
+                                "MEL_DefaultKitchen",
+                                "MEL_Status",
+                                "MEL_Price2"
+                            ],
+                            "properties": {
+                                "MEL_ArbName": {
+                                    "type": "string"
+                                },
+                                "MEL_EngName": {
+                                    "type": "string"
+                                },
+                                "MEL_CatID": {
+                                    "type": "string"
+                                },
+                                "MEL_Order": {
+                                    "type": "string"
+                                },
+                                "MEL_Price": {
+                                    "type": "string"
+                                },
+                                "MEL_Logo": {
+                                    "type": "string"
+                                },
+                                "MEL_Desc": {
+                                    "type": "string"
+                                },
+                                "MEL_DefaultKitchen": {
+                                    "type": "string"
+                                },
+                                "MEL_Status": {
+                                    "type": "string"
+                                },
+                                "MEL_Price2": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "meal",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "MEL_ArbName",
+                                "MEL_EngName",
+                                "MEL_CatID",
+                                "MEL_Order",
+                                "MEL_Price",
+                                "MEL_Logo",
+                                "MEL_Desc",
+                                "MEL_DefaultKitchen",
+                                "MEL_Status",
+                                "MEL_Price2"
+                            ],
+                            "properties": {
+                                "MEL_ArbName": {
+                                    "type": "string"
+                                },
+                                "MEL_EngName": {
+                                    "type": "string"
+                                },
+                                "MEL_CatID": {
+                                    "type": "string"
+                                },
+                                "MEL_Order": {
+                                    "type": "string"
+                                },
+                                "MEL_Price": {
+                                    "type": "string"
+                                },
+                                "MEL_Logo": {
+                                    "type": "string"
+                                },
+                                "MEL_Desc": {
+                                    "type": "string"
+                                },
+                                "MEL_DefaultKitchen": {
+                                    "type": "string"
+                                },
+                                "MEL_Status": {
+                                    "type": "string"
+                                },
+                                "MEL_Price2": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "meal",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/meal_option": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "post": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "OPT_ID",
+                                "MEL_ID"
+                            ],
+                            "properties": {
+                                "OPT_ID": {
+                                    "type": "string"
+                                },
+                                "MEL_ID": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "\/api\/meal_option\/{meal_option}": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "meal_option",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            },
+            "put": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "meal_option",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "OPT_ID",
+                                "MEL_ID"
+                            ],
+                            "properties": {
+                                "OPT_ID": {
+                                    "type": "string"
+                                },
+                                "MEL_ID": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "meal_option",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "OPT_ID",
+                                "MEL_ID"
+                            ],
+                            "properties": {
+                                "OPT_ID": {
+                                    "type": "string"
+                                },
+                                "MEL_ID": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "meal_option",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/notification": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "post": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "NTF_MSG",
+                                "NTF_CREATOR",
+                                "NTF_TOUSER",
+                                "NTF_CREATEDATE",
+                                "NTF_TYPE",
+                                "NTF_ISREAD"
+                            ],
+                            "properties": {
+                                "NTF_MSG": {
+                                    "type": "string"
+                                },
+                                "NTF_CREATOR": {
+                                    "type": "string"
+                                },
+                                "NTF_TOUSER": {
+                                    "type": "string"
+                                },
+                                "NTF_CREATEDATE": {
+                                    "type": "string"
+                                },
+                                "NTF_TYPE": {
+                                    "type": "string"
+                                },
+                                "NTF_ISREAD": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "\/api\/notification\/{notification}": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "notification",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            },
+            "put": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "notification",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "NTF_MSG",
+                                "NTF_CREATOR",
+                                "NTF_TOUSER",
+                                "NTF_CREATEDATE",
+                                "NTF_TYPE",
+                                "NTF_ISREAD"
+                            ],
+                            "properties": {
+                                "NTF_MSG": {
+                                    "type": "string"
+                                },
+                                "NTF_CREATOR": {
+                                    "type": "string"
+                                },
+                                "NTF_TOUSER": {
+                                    "type": "string"
+                                },
+                                "NTF_CREATEDATE": {
+                                    "type": "string"
+                                },
+                                "NTF_TYPE": {
+                                    "type": "string"
+                                },
+                                "NTF_ISREAD": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "notification",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "NTF_MSG",
+                                "NTF_CREATOR",
+                                "NTF_TOUSER",
+                                "NTF_CREATEDATE",
+                                "NTF_TYPE",
+                                "NTF_ISREAD"
+                            ],
+                            "properties": {
+                                "NTF_MSG": {
+                                    "type": "string"
+                                },
+                                "NTF_CREATOR": {
+                                    "type": "string"
+                                },
+                                "NTF_TOUSER": {
+                                    "type": "string"
+                                },
+                                "NTF_CREATEDATE": {
+                                    "type": "string"
+                                },
+                                "NTF_TYPE": {
+                                    "type": "string"
+                                },
+                                "NTF_ISREAD": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "notification",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/option": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "post": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "OPT_Name",
+                                "OPT_DefaultValue"
+                            ],
+                            "properties": {
+                                "OPT_Name": {
+                                    "type": "string"
+                                },
+                                "OPT_DefaultValue": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "\/api\/option\/{option}": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "option",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            },
+            "put": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "option",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "OPT_Name",
+                                "OPT_DefaultValue"
+                            ],
+                            "properties": {
+                                "OPT_Name": {
+                                    "type": "string"
+                                },
+                                "OPT_DefaultValue": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "option",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "OPT_Name",
+                                "OPT_DefaultValue"
+                            ],
+                            "properties": {
+                                "OPT_Name": {
+                                    "type": "string"
+                                },
+                                "OPT_DefaultValue": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "option",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/order": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "post": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "ORD_Type",
+                                "ORD_TableID",
+                                "ORD_StartTime",
+                                "ORD_ReadyAt",
+                                "ORD_EndTime",
+                                "ORD_CustomerID",
+                                "ORD_Status",
+                                "ORD_Total",
+                                "ORD_OrderNo",
+                                "ORD_LOG_SERIAL",
+                                "ORD_TotalDiscount",
+                                "ORD_NOTES",
+                                "ORD_BIL_SERIAL",
+                                "ORD_ReceviedCashPayment",
+                                "ORD_UserSerial",
+                                "ORD_UserDeviceName",
+                                "ORD_IncrementalID",
+                                "ORD_IsPosted",
+                                "ORD_DeleteReason"
+                            ],
+                            "properties": {
+                                "ORD_Type": {
+                                    "type": "string"
+                                },
+                                "ORD_TableID": {
+                                    "type": "string"
+                                },
+                                "ORD_StartTime": {
+                                    "type": "string"
+                                },
+                                "ORD_ReadyAt": {
+                                    "type": "string"
+                                },
+                                "ORD_EndTime": {
+                                    "type": "string"
+                                },
+                                "ORD_CustomerID": {
+                                    "type": "string"
+                                },
+                                "ORD_Status": {
+                                    "type": "string"
+                                },
+                                "ORD_Total": {
+                                    "type": "string"
+                                },
+                                "ORD_OrderNo": {
+                                    "type": "string"
+                                },
+                                "ORD_LOG_SERIAL": {
+                                    "type": "string"
+                                },
+                                "ORD_TotalDiscount": {
+                                    "type": "string"
+                                },
+                                "ORD_NOTES": {
+                                    "type": "string"
+                                },
+                                "ORD_BIL_SERIAL": {
+                                    "type": "string"
+                                },
+                                "ORD_ReceviedCashPayment": {
+                                    "type": "string"
+                                },
+                                "ORD_UserSerial": {
+                                    "type": "string"
+                                },
+                                "ORD_UserDeviceName": {
+                                    "type": "string"
+                                },
+                                "ORD_IncrementalID": {
+                                    "type": "string"
+                                },
+                                "ORD_IsPosted": {
+                                    "type": "string"
+                                },
+                                "ORD_DeleteReason": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "\/api\/order\/{order}": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "order",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            },
+            "put": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "order",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "ORD_Type",
+                                "ORD_TableID",
+                                "ORD_StartTime",
+                                "ORD_ReadyAt",
+                                "ORD_EndTime",
+                                "ORD_CustomerID",
+                                "ORD_Status",
+                                "ORD_Total",
+                                "ORD_OrderNo",
+                                "ORD_LOG_SERIAL",
+                                "ORD_TotalDiscount",
+                                "ORD_NOTES",
+                                "ORD_BIL_SERIAL",
+                                "ORD_ReceviedCashPayment",
+                                "ORD_UserSerial",
+                                "ORD_UserDeviceName",
+                                "ORD_IncrementalID",
+                                "ORD_IsPosted",
+                                "ORD_DeleteReason"
+                            ],
+                            "properties": {
+                                "ORD_Type": {
+                                    "type": "string"
+                                },
+                                "ORD_TableID": {
+                                    "type": "string"
+                                },
+                                "ORD_StartTime": {
+                                    "type": "string"
+                                },
+                                "ORD_ReadyAt": {
+                                    "type": "string"
+                                },
+                                "ORD_EndTime": {
+                                    "type": "string"
+                                },
+                                "ORD_CustomerID": {
+                                    "type": "string"
+                                },
+                                "ORD_Status": {
+                                    "type": "string"
+                                },
+                                "ORD_Total": {
+                                    "type": "string"
+                                },
+                                "ORD_OrderNo": {
+                                    "type": "string"
+                                },
+                                "ORD_LOG_SERIAL": {
+                                    "type": "string"
+                                },
+                                "ORD_TotalDiscount": {
+                                    "type": "string"
+                                },
+                                "ORD_NOTES": {
+                                    "type": "string"
+                                },
+                                "ORD_BIL_SERIAL": {
+                                    "type": "string"
+                                },
+                                "ORD_ReceviedCashPayment": {
+                                    "type": "string"
+                                },
+                                "ORD_UserSerial": {
+                                    "type": "string"
+                                },
+                                "ORD_UserDeviceName": {
+                                    "type": "string"
+                                },
+                                "ORD_IncrementalID": {
+                                    "type": "string"
+                                },
+                                "ORD_IsPosted": {
+                                    "type": "string"
+                                },
+                                "ORD_DeleteReason": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "order",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "ORD_Type",
+                                "ORD_TableID",
+                                "ORD_StartTime",
+                                "ORD_ReadyAt",
+                                "ORD_EndTime",
+                                "ORD_CustomerID",
+                                "ORD_Status",
+                                "ORD_Total",
+                                "ORD_OrderNo",
+                                "ORD_LOG_SERIAL",
+                                "ORD_TotalDiscount",
+                                "ORD_NOTES",
+                                "ORD_BIL_SERIAL",
+                                "ORD_ReceviedCashPayment",
+                                "ORD_UserSerial",
+                                "ORD_UserDeviceName",
+                                "ORD_IncrementalID",
+                                "ORD_IsPosted",
+                                "ORD_DeleteReason"
+                            ],
+                            "properties": {
+                                "ORD_Type": {
+                                    "type": "string"
+                                },
+                                "ORD_TableID": {
+                                    "type": "string"
+                                },
+                                "ORD_StartTime": {
+                                    "type": "string"
+                                },
+                                "ORD_ReadyAt": {
+                                    "type": "string"
+                                },
+                                "ORD_EndTime": {
+                                    "type": "string"
+                                },
+                                "ORD_CustomerID": {
+                                    "type": "string"
+                                },
+                                "ORD_Status": {
+                                    "type": "string"
+                                },
+                                "ORD_Total": {
+                                    "type": "string"
+                                },
+                                "ORD_OrderNo": {
+                                    "type": "string"
+                                },
+                                "ORD_LOG_SERIAL": {
+                                    "type": "string"
+                                },
+                                "ORD_TotalDiscount": {
+                                    "type": "string"
+                                },
+                                "ORD_NOTES": {
+                                    "type": "string"
+                                },
+                                "ORD_BIL_SERIAL": {
+                                    "type": "string"
+                                },
+                                "ORD_ReceviedCashPayment": {
+                                    "type": "string"
+                                },
+                                "ORD_UserSerial": {
+                                    "type": "string"
+                                },
+                                "ORD_UserDeviceName": {
+                                    "type": "string"
+                                },
+                                "ORD_IncrementalID": {
+                                    "type": "string"
+                                },
+                                "ORD_IsPosted": {
+                                    "type": "string"
+                                },
+                                "ORD_DeleteReason": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "order",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/order_detail": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "post": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "ORDD_OrderID",
+                                "ORDD_TableID",
+                                "ORDD_MealID",
+                                "ORDD_CustomerID",
+                                "ORDD_StartTime",
+                                "ORDD_EndTime",
+                                "ORDD_Discount",
+                                "ORDD_Status",
+                                "ORDD_Quantity",
+                                "ORDD_Total",
+                                "ORDD_Type",
+                                "ORDD_Price",
+                                "ORDD_Notes",
+                                "ORDD_DeleteReason",
+                                "ORDD_OrderNo",
+                                "ORDD_OrderTime",
+                                "ORDD_IsPrinted"
+                            ],
+                            "properties": {
+                                "ORDD_OrderID": {
+                                    "type": "string"
+                                },
+                                "ORDD_TableID": {
+                                    "type": "string"
+                                },
+                                "ORDD_MealID": {
+                                    "type": "string"
+                                },
+                                "ORDD_CustomerID": {
+                                    "type": "string"
+                                },
+                                "ORDD_StartTime": {
+                                    "type": "string"
+                                },
+                                "ORDD_EndTime": {
+                                    "type": "string"
+                                },
+                                "ORDD_Discount": {
+                                    "type": "string"
+                                },
+                                "ORDD_Status": {
+                                    "type": "string"
+                                },
+                                "ORDD_Quantity": {
+                                    "type": "string"
+                                },
+                                "ORDD_Total": {
+                                    "type": "string"
+                                },
+                                "ORDD_Type": {
+                                    "type": "string"
+                                },
+                                "ORDD_Price": {
+                                    "type": "string"
+                                },
+                                "ORDD_Notes": {
+                                    "type": "string"
+                                },
+                                "ORDD_DeleteReason": {
+                                    "type": "string"
+                                },
+                                "ORDD_OrderNo": {
+                                    "type": "string"
+                                },
+                                "ORDD_OrderTime": {
+                                    "type": "string"
+                                },
+                                "ORDD_IsPrinted": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "\/api\/order_detail\/{order_detail}": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "order_detail",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            },
+            "put": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "order_detail",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "ORDD_OrderID",
+                                "ORDD_TableID",
+                                "ORDD_MealID",
+                                "ORDD_CustomerID",
+                                "ORDD_StartTime",
+                                "ORDD_EndTime",
+                                "ORDD_Discount",
+                                "ORDD_Status",
+                                "ORDD_Quantity",
+                                "ORDD_Total",
+                                "ORDD_Type",
+                                "ORDD_Price",
+                                "ORDD_Notes",
+                                "ORDD_DeleteReason",
+                                "ORDD_OrderNo",
+                                "ORDD_OrderTime",
+                                "ORDD_IsPrinted"
+                            ],
+                            "properties": {
+                                "ORDD_OrderID": {
+                                    "type": "string"
+                                },
+                                "ORDD_TableID": {
+                                    "type": "string"
+                                },
+                                "ORDD_MealID": {
+                                    "type": "string"
+                                },
+                                "ORDD_CustomerID": {
+                                    "type": "string"
+                                },
+                                "ORDD_StartTime": {
+                                    "type": "string"
+                                },
+                                "ORDD_EndTime": {
+                                    "type": "string"
+                                },
+                                "ORDD_Discount": {
+                                    "type": "string"
+                                },
+                                "ORDD_Status": {
+                                    "type": "string"
+                                },
+                                "ORDD_Quantity": {
+                                    "type": "string"
+                                },
+                                "ORDD_Total": {
+                                    "type": "string"
+                                },
+                                "ORDD_Type": {
+                                    "type": "string"
+                                },
+                                "ORDD_Price": {
+                                    "type": "string"
+                                },
+                                "ORDD_Notes": {
+                                    "type": "string"
+                                },
+                                "ORDD_DeleteReason": {
+                                    "type": "string"
+                                },
+                                "ORDD_OrderNo": {
+                                    "type": "string"
+                                },
+                                "ORDD_OrderTime": {
+                                    "type": "string"
+                                },
+                                "ORDD_IsPrinted": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "order_detail",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "ORDD_OrderID",
+                                "ORDD_TableID",
+                                "ORDD_MealID",
+                                "ORDD_CustomerID",
+                                "ORDD_StartTime",
+                                "ORDD_EndTime",
+                                "ORDD_Discount",
+                                "ORDD_Status",
+                                "ORDD_Quantity",
+                                "ORDD_Total",
+                                "ORDD_Type",
+                                "ORDD_Price",
+                                "ORDD_Notes",
+                                "ORDD_DeleteReason",
+                                "ORDD_OrderNo",
+                                "ORDD_OrderTime",
+                                "ORDD_IsPrinted"
+                            ],
+                            "properties": {
+                                "ORDD_OrderID": {
+                                    "type": "string"
+                                },
+                                "ORDD_TableID": {
+                                    "type": "string"
+                                },
+                                "ORDD_MealID": {
+                                    "type": "string"
+                                },
+                                "ORDD_CustomerID": {
+                                    "type": "string"
+                                },
+                                "ORDD_StartTime": {
+                                    "type": "string"
+                                },
+                                "ORDD_EndTime": {
+                                    "type": "string"
+                                },
+                                "ORDD_Discount": {
+                                    "type": "string"
+                                },
+                                "ORDD_Status": {
+                                    "type": "string"
+                                },
+                                "ORDD_Quantity": {
+                                    "type": "string"
+                                },
+                                "ORDD_Total": {
+                                    "type": "string"
+                                },
+                                "ORDD_Type": {
+                                    "type": "string"
+                                },
+                                "ORDD_Price": {
+                                    "type": "string"
+                                },
+                                "ORDD_Notes": {
+                                    "type": "string"
+                                },
+                                "ORDD_DeleteReason": {
+                                    "type": "string"
+                                },
+                                "ORDD_OrderNo": {
+                                    "type": "string"
+                                },
+                                "ORDD_OrderTime": {
+                                    "type": "string"
+                                },
+                                "ORDD_IsPrinted": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "order_detail",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/order_option": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "post": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "OPT_ID",
+                                "ORDD_Serial",
+                                "Value"
+                            ],
+                            "properties": {
+                                "OPT_ID": {
+                                    "type": "string"
+                                },
+                                "ORDD_Serial": {
+                                    "type": "string"
+                                },
+                                "Value": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "\/api\/order_option\/{order_option}": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "order_option",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            },
+            "put": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "order_option",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "OPT_ID",
+                                "ORDD_Serial",
+                                "Value"
+                            ],
+                            "properties": {
+                                "OPT_ID": {
+                                    "type": "string"
+                                },
+                                "ORDD_Serial": {
+                                    "type": "string"
+                                },
+                                "Value": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "order_option",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "OPT_ID",
+                                "ORDD_Serial",
+                                "Value"
+                            ],
+                            "properties": {
+                                "OPT_ID": {
+                                    "type": "string"
+                                },
+                                "ORDD_Serial": {
+                                    "type": "string"
+                                },
+                                "Value": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "order_option",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/refresh": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "post": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "REST_Refresh"
+                            ],
+                            "properties": {
+                                "REST_Refresh": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "\/api\/refresh\/{refresh}": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "refresh",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            },
+            "put": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "refresh",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "REST_Refresh"
+                            ],
+                            "properties": {
+                                "REST_Refresh": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "refresh",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "REST_Refresh"
+                            ],
+                            "properties": {
+                                "REST_Refresh": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "refresh",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/temp_table": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "post": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "TMP_Type",
+                                "TMP_OpenTime",
+                                "TMP_CloseTime",
+                                "TMP_CustomerID",
+                                "TMP_WaiterID",
+                                "TMP_GuestCount",
+                                "TMP_Status",
+                                "TMP_Total",
+                                "TMP_Discount",
+                                "TMP_UserID",
+                                "TMP_Notes",
+                                "TMP_OrderID"
+                            ],
+                            "properties": {
+                                "TMP_Type": {
+                                    "type": "string"
+                                },
+                                "TMP_OpenTime": {
+                                    "type": "string"
+                                },
+                                "TMP_CloseTime": {
+                                    "type": "string"
+                                },
+                                "TMP_CustomerID": {
+                                    "type": "string"
+                                },
+                                "TMP_WaiterID": {
+                                    "type": "string"
+                                },
+                                "TMP_GuestCount": {
+                                    "type": "string"
+                                },
+                                "TMP_Status": {
+                                    "type": "string"
+                                },
+                                "TMP_Total": {
+                                    "type": "string"
+                                },
+                                "TMP_Discount": {
+                                    "type": "string"
+                                },
+                                "TMP_UserID": {
+                                    "type": "string"
+                                },
+                                "TMP_Notes": {
+                                    "type": "string"
+                                },
+                                "TMP_OrderID": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "\/api\/temp_table\/{temp_table}": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "temp_table",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            },
+            "put": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "temp_table",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "TMP_Type",
+                                "TMP_OpenTime",
+                                "TMP_CloseTime",
+                                "TMP_CustomerID",
+                                "TMP_WaiterID",
+                                "TMP_GuestCount",
+                                "TMP_Status",
+                                "TMP_Total",
+                                "TMP_Discount",
+                                "TMP_UserID",
+                                "TMP_Notes",
+                                "TMP_OrderID"
+                            ],
+                            "properties": {
+                                "TMP_Type": {
+                                    "type": "string"
+                                },
+                                "TMP_OpenTime": {
+                                    "type": "string"
+                                },
+                                "TMP_CloseTime": {
+                                    "type": "string"
+                                },
+                                "TMP_CustomerID": {
+                                    "type": "string"
+                                },
+                                "TMP_WaiterID": {
+                                    "type": "string"
+                                },
+                                "TMP_GuestCount": {
+                                    "type": "string"
+                                },
+                                "TMP_Status": {
+                                    "type": "string"
+                                },
+                                "TMP_Total": {
+                                    "type": "string"
+                                },
+                                "TMP_Discount": {
+                                    "type": "string"
+                                },
+                                "TMP_UserID": {
+                                    "type": "string"
+                                },
+                                "TMP_Notes": {
+                                    "type": "string"
+                                },
+                                "TMP_OrderID": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "temp_table",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "TMP_Type",
+                                "TMP_OpenTime",
+                                "TMP_CloseTime",
+                                "TMP_CustomerID",
+                                "TMP_WaiterID",
+                                "TMP_GuestCount",
+                                "TMP_Status",
+                                "TMP_Total",
+                                "TMP_Discount",
+                                "TMP_UserID",
+                                "TMP_Notes",
+                                "TMP_OrderID"
+                            ],
+                            "properties": {
+                                "TMP_Type": {
+                                    "type": "string"
+                                },
+                                "TMP_OpenTime": {
+                                    "type": "string"
+                                },
+                                "TMP_CloseTime": {
+                                    "type": "string"
+                                },
+                                "TMP_CustomerID": {
+                                    "type": "string"
+                                },
+                                "TMP_WaiterID": {
+                                    "type": "string"
+                                },
+                                "TMP_GuestCount": {
+                                    "type": "string"
+                                },
+                                "TMP_Status": {
+                                    "type": "string"
+                                },
+                                "TMP_Total": {
+                                    "type": "string"
+                                },
+                                "TMP_Discount": {
+                                    "type": "string"
+                                },
+                                "TMP_UserID": {
+                                    "type": "string"
+                                },
+                                "TMP_Notes": {
+                                    "type": "string"
+                                },
+                                "TMP_OrderID": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "temp_table",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/temp_table_log": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "post": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "TMP_TableID",
+                                "TMP_Type",
+                                "TMP_OpenTime",
+                                "TMP_CloseTime",
+                                "TMP_CustomerID",
+                                "TMP_WaiterID",
+                                "TMP_GuestCount",
+                                "TMP_Status",
+                                "TMP_Total",
+                                "TMP_Discount",
+                                "TMP_UserID",
+                                "TMP_Notes"
+                            ],
+                            "properties": {
+                                "TMP_TableID": {
+                                    "type": "string"
+                                },
+                                "TMP_Type": {
+                                    "type": "string"
+                                },
+                                "TMP_OpenTime": {
+                                    "type": "string"
+                                },
+                                "TMP_CloseTime": {
+                                    "type": "string"
+                                },
+                                "TMP_CustomerID": {
+                                    "type": "string"
+                                },
+                                "TMP_WaiterID": {
+                                    "type": "string"
+                                },
+                                "TMP_GuestCount": {
+                                    "type": "string"
+                                },
+                                "TMP_Status": {
+                                    "type": "string"
+                                },
+                                "TMP_Total": {
+                                    "type": "string"
+                                },
+                                "TMP_Discount": {
+                                    "type": "string"
+                                },
+                                "TMP_UserID": {
+                                    "type": "string"
+                                },
+                                "TMP_Notes": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "\/api\/temp_table_log\/{temp_table_log}": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "temp_table_log",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            },
+            "put": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "temp_table_log",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "TMP_TableID",
+                                "TMP_Type",
+                                "TMP_OpenTime",
+                                "TMP_CloseTime",
+                                "TMP_CustomerID",
+                                "TMP_WaiterID",
+                                "TMP_GuestCount",
+                                "TMP_Status",
+                                "TMP_Total",
+                                "TMP_Discount",
+                                "TMP_UserID",
+                                "TMP_Notes"
+                            ],
+                            "properties": {
+                                "TMP_TableID": {
+                                    "type": "string"
+                                },
+                                "TMP_Type": {
+                                    "type": "string"
+                                },
+                                "TMP_OpenTime": {
+                                    "type": "string"
+                                },
+                                "TMP_CloseTime": {
+                                    "type": "string"
+                                },
+                                "TMP_CustomerID": {
+                                    "type": "string"
+                                },
+                                "TMP_WaiterID": {
+                                    "type": "string"
+                                },
+                                "TMP_GuestCount": {
+                                    "type": "string"
+                                },
+                                "TMP_Status": {
+                                    "type": "string"
+                                },
+                                "TMP_Total": {
+                                    "type": "string"
+                                },
+                                "TMP_Discount": {
+                                    "type": "string"
+                                },
+                                "TMP_UserID": {
+                                    "type": "string"
+                                },
+                                "TMP_Notes": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "temp_table_log",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "TMP_TableID",
+                                "TMP_Type",
+                                "TMP_OpenTime",
+                                "TMP_CloseTime",
+                                "TMP_CustomerID",
+                                "TMP_WaiterID",
+                                "TMP_GuestCount",
+                                "TMP_Status",
+                                "TMP_Total",
+                                "TMP_Discount",
+                                "TMP_UserID",
+                                "TMP_Notes"
+                            ],
+                            "properties": {
+                                "TMP_TableID": {
+                                    "type": "string"
+                                },
+                                "TMP_Type": {
+                                    "type": "string"
+                                },
+                                "TMP_OpenTime": {
+                                    "type": "string"
+                                },
+                                "TMP_CloseTime": {
+                                    "type": "string"
+                                },
+                                "TMP_CustomerID": {
+                                    "type": "string"
+                                },
+                                "TMP_WaiterID": {
+                                    "type": "string"
+                                },
+                                "TMP_GuestCount": {
+                                    "type": "string"
+                                },
+                                "TMP_Status": {
+                                    "type": "string"
+                                },
+                                "TMP_Total": {
+                                    "type": "string"
+                                },
+                                "TMP_Discount": {
+                                    "type": "string"
+                                },
+                                "TMP_UserID": {
+                                    "type": "string"
+                                },
+                                "TMP_Notes": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "temp_table_log",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/auth\/login": {
+            "post": {
+                "summary": "Get a JWT via given credentials.",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "U_Name",
+                                "U_Password"
+                            ],
+                            "properties": {
+                                "U_Name": {
+                                    "type": "string"
+                                },
+                                "U_Password": {
+                                    "type": "string"
+                                },
+                                "Type": {
+                                    "type": "string",
+                                    "enum": [
+                                        "1",
+                                        "6"
+                                    ]
+                                },
+                                "WaiterPIN": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "\/api\/auth\/me": {
+            "post": {
+                "summary": "Get the authenticated User.",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/api\/auth\/logout": {
+            "post": {
+                "summary": "Log the user out (Invalidate the token).",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/api\/auth\/refresh": {
+            "post": {
+                "summary": "Refresh a token.",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/api\/auth\/user": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/complete-order\/{id}": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "type": "string",
+                        "required": false,
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/testmail": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/dashboard\/{any1}": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "any1",
+                        "type": "string",
+                        "required": false,
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/{any}": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "any",
+                        "type": "string",
+                        "required": false,
+                        "description": ""
+                    }
+                ]
+            }
+        }
+    }
+}
