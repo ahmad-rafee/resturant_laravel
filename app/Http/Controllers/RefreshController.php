@@ -18,7 +18,7 @@ class RefreshController extends Controller
     }
     public function __construct(Request $request){
         parent::__construct($request);
-        $this->authorizeResource(Refresh::class,Str::snake("Refresh"));
+        // $this->authorizeResource(Refresh::class,Str::snake("Refresh"));
     }
     public function index(Request $request)
     {

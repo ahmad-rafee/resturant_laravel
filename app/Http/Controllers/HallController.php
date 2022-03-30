@@ -18,7 +18,7 @@ class HallController extends Controller
     }
     public function __construct(Request $request){
         parent::__construct($request);
-        $this->authorizeResource(Hall::class,Str::snake("Hall"));
+        // $this->authorizeResource(Hall::class,Str::snake("Hall"));
     }
     public function index(Request $request)
     {

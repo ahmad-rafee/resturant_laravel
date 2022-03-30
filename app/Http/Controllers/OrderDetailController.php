@@ -18,7 +18,7 @@ class OrderDetailController extends Controller
     }
     public function __construct(Request $request){
         parent::__construct($request);
-        $this->authorizeResource(OrderDetail::class,Str::snake("OrderDetail"));
+        // $this->authorizeResource(OrderDetail::class,Str::snake("OrderDetail"));
     }
     public function index(Request $request)
     {

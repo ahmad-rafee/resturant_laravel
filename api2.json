@@ -5,8 +5,8 @@
         "description": "",
         "version": "1.0.0"
     },
-    "host": "http:\/\/192.168.0.18:8000",
-    "basePath": "",
+    "host": "http:\/\/127.0.0.1:8000",
+    "basePath": "\/",
     "paths": {
         "\/request-docs": {
             "get": {
@@ -111,6 +111,456 @@
                         "description": "OK"
                     }
                 }
+            }
+        },
+        "\/api\/beneficiary": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "post": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "BEN_Name",
+                                "BEN_CompanyOwner",
+                                "BEN_ContactPerson",
+                                "BEN_WorkField",
+                                "BEN_LisNo",
+                                "BEN_AccFather",
+                                "BEN_Account",
+                                "BEN_Status",
+                                "BEN_Type",
+                                "BEN_CatNo",
+                                "BEN_Address",
+                                "BEN_Tel",
+                                "BEN_Fax",
+                                "BEN_Mobile",
+                                "BEN_Mers",
+                                "BEN_Email",
+                                "BEN_URL",
+                                "BEN_Notes",
+                                "Ben_IsStoreClient",
+                                "BEN_StoreNo",
+                                "BEN_BirthDate",
+                                "BEN_Image",
+                                "BEN_RefNo",
+                                "BEN_Points",
+                                "BEN_MaxDebit",
+                                "BEN_TaxLicenseNo"
+                            ],
+                            "properties": {
+                                "BEN_Name": {
+                                    "type": "string"
+                                },
+                                "BEN_CompanyOwner": {
+                                    "type": "string"
+                                },
+                                "BEN_ContactPerson": {
+                                    "type": "string"
+                                },
+                                "BEN_WorkField": {
+                                    "type": "string"
+                                },
+                                "BEN_LisNo": {
+                                    "type": "string"
+                                },
+                                "BEN_AccFather": {
+                                    "type": "string"
+                                },
+                                "BEN_Account": {
+                                    "type": "string"
+                                },
+                                "BEN_Status": {
+                                    "type": "string"
+                                },
+                                "BEN_Type": {
+                                    "type": "string"
+                                },
+                                "BEN_CatNo": {
+                                    "type": "string"
+                                },
+                                "BEN_Address": {
+                                    "type": "string"
+                                },
+                                "BEN_Tel": {
+                                    "type": "string"
+                                },
+                                "BEN_Fax": {
+                                    "type": "string"
+                                },
+                                "BEN_Mobile": {
+                                    "type": "string"
+                                },
+                                "BEN_Mers": {
+                                    "type": "string"
+                                },
+                                "BEN_Email": {
+                                    "type": "string"
+                                },
+                                "BEN_URL": {
+                                    "type": "string"
+                                },
+                                "BEN_Notes": {
+                                    "type": "string"
+                                },
+                                "Ben_IsStoreClient": {
+                                    "type": "string"
+                                },
+                                "BEN_StoreNo": {
+                                    "type": "string"
+                                },
+                                "BEN_BirthDate": {
+                                    "type": "string"
+                                },
+                                "BEN_Image": {
+                                    "type": "string"
+                                },
+                                "BEN_RefNo": {
+                                    "type": "string"
+                                },
+                                "BEN_Points": {
+                                    "type": "string"
+                                },
+                                "BEN_MaxDebit": {
+                                    "type": "string"
+                                },
+                                "BEN_TaxLicenseNo": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "\/api\/beneficiary\/{beneficiary}": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "beneficiary",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
+            },
+            "put": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "beneficiary",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "BEN_Name",
+                                "BEN_CompanyOwner",
+                                "BEN_ContactPerson",
+                                "BEN_WorkField",
+                                "BEN_LisNo",
+                                "BEN_AccFather",
+                                "BEN_Account",
+                                "BEN_Status",
+                                "BEN_Type",
+                                "BEN_CatNo",
+                                "BEN_Address",
+                                "BEN_Tel",
+                                "BEN_Fax",
+                                "BEN_Mobile",
+                                "BEN_Mers",
+                                "BEN_Email",
+                                "BEN_URL",
+                                "BEN_Notes",
+                                "Ben_IsStoreClient",
+                                "BEN_StoreNo",
+                                "BEN_BirthDate",
+                                "BEN_Image",
+                                "BEN_RefNo",
+                                "BEN_Points",
+                                "BEN_MaxDebit",
+                                "BEN_TaxLicenseNo"
+                            ],
+                            "properties": {
+                                "BEN_Name": {
+                                    "type": "string"
+                                },
+                                "BEN_CompanyOwner": {
+                                    "type": "string"
+                                },
+                                "BEN_ContactPerson": {
+                                    "type": "string"
+                                },
+                                "BEN_WorkField": {
+                                    "type": "string"
+                                },
+                                "BEN_LisNo": {
+                                    "type": "string"
+                                },
+                                "BEN_AccFather": {
+                                    "type": "string"
+                                },
+                                "BEN_Account": {
+                                    "type": "string"
+                                },
+                                "BEN_Status": {
+                                    "type": "string"
+                                },
+                                "BEN_Type": {
+                                    "type": "string"
+                                },
+                                "BEN_CatNo": {
+                                    "type": "string"
+                                },
+                                "BEN_Address": {
+                                    "type": "string"
+                                },
+                                "BEN_Tel": {
+                                    "type": "string"
+                                },
+                                "BEN_Fax": {
+                                    "type": "string"
+                                },
+                                "BEN_Mobile": {
+                                    "type": "string"
+                                },
+                                "BEN_Mers": {
+                                    "type": "string"
+                                },
+                                "BEN_Email": {
+                                    "type": "string"
+                                },
+                                "BEN_URL": {
+                                    "type": "string"
+                                },
+                                "BEN_Notes": {
+                                    "type": "string"
+                                },
+                                "Ben_IsStoreClient": {
+                                    "type": "string"
+                                },
+                                "BEN_StoreNo": {
+                                    "type": "string"
+                                },
+                                "BEN_BirthDate": {
+                                    "type": "string"
+                                },
+                                "BEN_Image": {
+                                    "type": "string"
+                                },
+                                "BEN_RefNo": {
+                                    "type": "string"
+                                },
+                                "BEN_Points": {
+                                    "type": "string"
+                                },
+                                "BEN_MaxDebit": {
+                                    "type": "string"
+                                },
+                                "BEN_TaxLicenseNo": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "beneficiary",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "BEN_Name",
+                                "BEN_CompanyOwner",
+                                "BEN_ContactPerson",
+                                "BEN_WorkField",
+                                "BEN_LisNo",
+                                "BEN_AccFather",
+                                "BEN_Account",
+                                "BEN_Status",
+                                "BEN_Type",
+                                "BEN_CatNo",
+                                "BEN_Address",
+                                "BEN_Tel",
+                                "BEN_Fax",
+                                "BEN_Mobile",
+                                "BEN_Mers",
+                                "BEN_Email",
+                                "BEN_URL",
+                                "BEN_Notes",
+                                "Ben_IsStoreClient",
+                                "BEN_StoreNo",
+                                "BEN_BirthDate",
+                                "BEN_Image",
+                                "BEN_RefNo",
+                                "BEN_Points",
+                                "BEN_MaxDebit",
+                                "BEN_TaxLicenseNo"
+                            ],
+                            "properties": {
+                                "BEN_Name": {
+                                    "type": "string"
+                                },
+                                "BEN_CompanyOwner": {
+                                    "type": "string"
+                                },
+                                "BEN_ContactPerson": {
+                                    "type": "string"
+                                },
+                                "BEN_WorkField": {
+                                    "type": "string"
+                                },
+                                "BEN_LisNo": {
+                                    "type": "string"
+                                },
+                                "BEN_AccFather": {
+                                    "type": "string"
+                                },
+                                "BEN_Account": {
+                                    "type": "string"
+                                },
+                                "BEN_Status": {
+                                    "type": "string"
+                                },
+                                "BEN_Type": {
+                                    "type": "string"
+                                },
+                                "BEN_CatNo": {
+                                    "type": "string"
+                                },
+                                "BEN_Address": {
+                                    "type": "string"
+                                },
+                                "BEN_Tel": {
+                                    "type": "string"
+                                },
+                                "BEN_Fax": {
+                                    "type": "string"
+                                },
+                                "BEN_Mobile": {
+                                    "type": "string"
+                                },
+                                "BEN_Mers": {
+                                    "type": "string"
+                                },
+                                "BEN_Email": {
+                                    "type": "string"
+                                },
+                                "BEN_URL": {
+                                    "type": "string"
+                                },
+                                "BEN_Notes": {
+                                    "type": "string"
+                                },
+                                "Ben_IsStoreClient": {
+                                    "type": "string"
+                                },
+                                "BEN_StoreNo": {
+                                    "type": "string"
+                                },
+                                "BEN_BirthDate": {
+                                    "type": "string"
+                                },
+                                "BEN_Image": {
+                                    "type": "string"
+                                },
+                                "BEN_RefNo": {
+                                    "type": "string"
+                                },
+                                "BEN_Points": {
+                                    "type": "string"
+                                },
+                                "BEN_MaxDebit": {
+                                    "type": "string"
+                                },
+                                "BEN_TaxLicenseNo": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "beneficiary",
+                        "type": "string",
+                        "required": true,
+                        "description": ""
+                    }
+                ]
             }
         },
         "\/api\/category": {

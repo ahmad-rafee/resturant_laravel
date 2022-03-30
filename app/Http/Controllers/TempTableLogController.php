@@ -18,7 +18,7 @@ class TempTableLogController extends Controller
     }
     public function __construct(Request $request){
         parent::__construct($request);
-        $this->authorizeResource(TempTableLog::class,Str::snake("TempTableLog"));
+        // $this->authorizeResource(TempTableLog::class,Str::snake("TempTableLog"));
     }
     public function index(Request $request)
     {

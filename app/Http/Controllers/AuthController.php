@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UserLoginRequest;
 use App\Models\User;
+use App\Models\Waiter;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Str;
 use Tymon\JWTAuth\Facades\JWTAuth;
@@ -33,21 +34,18 @@ class AuthController extends BaseController
      */
     public function login(UserLoginRequest $request)
     {
-        $user = User::where('U_Name', '=', $request->U_Name)->first();
+        // $user = User::where('U_Name', '=', $request->U_Name)->first();
         $waiter_id = null;
-        if($request->Type == 6){
-            $pin = $request->Waiter_PIN;
-            $waiter = $user->waiters()->where('WTR_PIN','=',$pin)->first();
-            // die($waiter);
-            $waiter_id = $waiter?->WTR_ID;
-            $user->waiter_id = $waiter_id;
-        }
-        if ($user->U_Password == $request->U_Password) {
-            $token = JWTAuth::fromUser($user,['waiter_id'=>$waiter_id]);
-            $waiter_token = Crypt::encrypt($waiter_id);
-            return $this->respondWithToken($token,$waiter_token);
-        }
-        return response()->json(['error' => 'Unauthorized'], 401);
+        $pin = $request->WaiterPIN;
+        $waiter = Waiter::where('WTR_PIN', '=', $pin)->first();
+        // die($waiter);
+        if (!$waiter)
+            return response()->json(['error' => 'Unauthorized'], 401);
+        $waiter_id = $waiter?->WTR_ID;
+        // $user->waiter_id = $waiter_id;
+        $waiter_token = Crypt::encrypt($waiter_id);
+        if ($waiter_token)
+            return $this->respondWithToken(null, $waiter_token);
     }
 
     /**
@@ -93,7 +91,7 @@ class AuthController extends BaseController
      *
      * @return \Illuminate\Http\JsonResponse
      */
-    protected function respondWithToken($token,$waiter_token)
+    protected function respondWithToken($token, $waiter_token)
     {
 
         return response()->json([

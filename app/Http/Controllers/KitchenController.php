@@ -18,7 +18,7 @@ class KitchenController extends Controller
     }
     public function __construct(Request $request){
         parent::__construct($request);
-        $this->authorizeResource(Kitchen::class,Str::snake("Kitchen"));
+        // $this->authorizeResource(Kitchen::class,Str::snake("Kitchen"));
     }
     public function index(Request $request)
     {

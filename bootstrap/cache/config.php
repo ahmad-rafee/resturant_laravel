@@ -193,7 +193,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'C:\\Users\\ahmed\\Desktop\\sahl\\backend\\storage\\framework/cache/data',
+        'path' => 'C:\\Users\\ahmed\\Desktop\\resturant_laravel\\backend\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -364,12 +364,12 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\Users\\ahmed\\Desktop\\sahl\\backend\\storage\\app',
+        'root' => 'C:\\Users\\ahmed\\Desktop\\resturant_laravel\\backend\\storage\\app',
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\Users\\ahmed\\Desktop\\sahl\\backend\\storage\\app/public',
+        'root' => 'C:\\Users\\ahmed\\Desktop\\resturant_laravel\\backend\\storage\\app/public',
         'url' => 'http://127.0.0.1:8000/storage',
         'visibility' => 'public',
       ),
@@ -387,7 +387,7 @@
     ),
     'links' => 
     array (
-      'C:\\Users\\ahmed\\Desktop\\sahl\\backend\\public\\storage' => 'C:\\Users\\ahmed\\Desktop\\sahl\\backend\\storage\\app/public',
+      'C:\\Users\\ahmed\\Desktop\\resturant_laravel\\backend\\public\\storage' => 'C:\\Users\\ahmed\\Desktop\\resturant_laravel\\backend\\storage\\app/public',
     ),
   ),
   'hashing' => 
@@ -422,13 +422,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'C:\\Users\\ahmed\\Desktop\\sahl\\backend\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\ahmed\\Desktop\\resturant_laravel\\backend\\storage\\logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'C:\\Users\\ahmed\\Desktop\\sahl\\backend\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\ahmed\\Desktop\\resturant_laravel\\backend\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -479,7 +479,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'C:\\Users\\ahmed\\Desktop\\sahl\\backend\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\ahmed\\Desktop\\resturant_laravel\\backend\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -545,7 +545,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'C:\\Users\\ahmed\\Desktop\\sahl\\backend\\resources\\views/vendor/mail',
+        0 => 'C:\\Users\\ahmed\\Desktop\\resturant_laravel\\backend\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -611,7 +611,7 @@
     'middlewares' => 
     array (
     ),
-    'docs_path' => 'C:\\Users\\ahmed\\Desktop\\sahl\\backend\\docs/request-docs/',
+    'docs_path' => 'C:\\Users\\ahmed\\Desktop\\resturant_laravel\\backend\\docs/request-docs/',
     'sort_by' => 'default',
     'only_route_uri_start_with' => '',
     'hide_matching' => 
@@ -668,7 +668,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'C:\\Users\\ahmed\\Desktop\\sahl\\backend\\storage\\framework/sessions',
+    'files' => 'C:\\Users\\ahmed\\Desktop\\resturant_laravel\\backend\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -688,9 +688,9 @@
   array (
     'paths' => 
     array (
-      0 => 'C:\\Users\\ahmed\\Desktop\\sahl\\backend\\resources\\views',
+      0 => 'C:\\Users\\ahmed\\Desktop\\resturant_laravel\\backend\\resources\\views',
     ),
-    'compiled' => 'C:\\Users\\ahmed\\Desktop\\sahl\\backend\\storage\\framework\\views',
+    'compiled' => 'C:\\Users\\ahmed\\Desktop\\resturant_laravel\\backend\\storage\\framework\\views',
   ),
   'websockets' => 
   array (
@@ -827,8 +827,8 @@
   array (
     'config' => 
     array (
-      'migration_template_path' => 'C:\\Users\\ahmed\\Desktop\\sahl\\backend\\vendor\\kitloong\\laravel-migrations-generator\\src\\config/../MigrationsGenerator/stub/migration.stub',
-      'migration_target_path' => 'C:\\Users\\ahmed\\Desktop\\sahl\\backend\\database/migrations',
+      'migration_template_path' => 'C:\\Users\\ahmed\\Desktop\\resturant_laravel\\backend\\vendor\\kitloong\\laravel-migrations-generator\\src\\config/../MigrationsGenerator/stub/migration.stub',
+      'migration_target_path' => 'C:\\Users\\ahmed\\Desktop\\resturant_laravel\\backend\\database/migrations',
       'filename_pattern' => 
       array (
         'table' => '[datetime_prefix]_create_[table]_table.php',

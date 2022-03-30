@@ -12,7 +12,7 @@ class Order extends Model
     use HasFactory;
     protected $guarded = [];
     public $timestamps = false;
-
+    protected $appends = ['customer_name','table_name'];
     public static function createRules($user)
     {
         return  [
@@ -84,5 +84,18 @@ class Order extends Model
                 }
             }
         }
+    }
+    public function beneficiary()
+    {
+        return $this->belongsTo(Beneficiary::class, 'ORD_CustomerID','BEN_No');
+    }
+    public function order_table(){
+        return $this->belongsTo(HallDecor::class,'ORD_TableID','DEC_ID');
+    }
+    public function getCustomerNameAttribute(){
+        return $this->beneficiary?->BEN_Name;
+    }
+    public function getTableNameAttribute(){
+        return $this->order_table?->DEC_Name;
     }
 }

@@ -18,7 +18,7 @@ class ImageController extends Controller
     }
     public function __construct(Request $request){
         parent::__construct($request);
-        $this->authorizeResource(Image::class,Str::snake("Image"));
+        // $this->authorizeResource(Image::class,Str::snake("Image"));
     }
     public function index(Request $request)
     {

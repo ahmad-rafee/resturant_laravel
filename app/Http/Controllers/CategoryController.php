@@ -22,7 +22,7 @@ class CategoryController extends Controller
     public function __construct(Request $request)
     {
         parent::__construct($request);
-        $this->authorizeResource(Category::class, Str::snake("Category"));
+        // $this->authorizeResource(Category::class, Str::snake("Category"));
     }
     public function index(Request $request)
     {

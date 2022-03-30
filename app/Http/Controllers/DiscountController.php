@@ -18,7 +18,7 @@ class DiscountController extends Controller
     }
     public function __construct(Request $request){
         parent::__construct($request);
-        $this->authorizeResource(Discount::class,Str::snake("Discount"));
+        // $this->authorizeResource(Discount::class,Str::snake("Discount"));
     }
     public function index(Request $request)
     {

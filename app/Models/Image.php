@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Casts\Base64Image;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -12,7 +13,9 @@ class Image extends Model
     use HasFactory;
     protected $guarded = [];
     public $timestamps = false;
-
+    protected $casts = [
+        'IMG_DATA'=>Base64Image::class
+    ];
     public static function createRules($user)
     {
         return  [

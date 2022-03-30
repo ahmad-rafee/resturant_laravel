@@ -81,4 +81,7 @@ class OrderDetail extends Model
             }
         }
     }
+    public function meal(){
+        return $this->belongsTo(Meal::class,'MEL_ID','ORDD_MealID')
+    }
 }

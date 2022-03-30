@@ -18,7 +18,7 @@ class OptionController extends Controller
     }
     public function __construct(Request $request){
         parent::__construct($request);
-        $this->authorizeResource(Option::class,Str::snake("Option"));
+        // $this->authorizeResource(Option::class,Str::snake("Option"));
     }
     public function index(Request $request)
     {

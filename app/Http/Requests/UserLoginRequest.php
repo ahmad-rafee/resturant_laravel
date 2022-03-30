@@ -24,9 +24,9 @@ class UserLoginRequest extends FormRequest
     public function rules()
     {
         return [
-            'U_Name'=>'required',
-            'U_Password'=>'required',
-            'Type'=>'sometimes|in:1,6',
+            // 'U_Name'=>'required',
+            // 'U_Password'=>'required',
+            // 'Type'=>'sometimes|in:1,6',
             'WaiterPIN'=>'nullable'
         ];
     }

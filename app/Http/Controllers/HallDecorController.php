@@ -18,7 +18,7 @@ class HallDecorController extends Controller
     }
     public function __construct(Request $request){
         parent::__construct($request);
-        $this->authorizeResource(HallDecor::class,Str::snake("HallDecor"));
+        // $this->authorizeResource(HallDecor::class,Str::snake("HallDecor"));
     }
     public function index(Request $request)
     {

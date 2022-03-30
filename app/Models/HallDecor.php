@@ -63,4 +63,8 @@ class HallDecor extends Model
             }
         }
     }
+    public function hall()
+    {
+        return $this->belongsTo(Hall::class, 'DEC_HALLID', 'HALL_ID');
+    }
 }

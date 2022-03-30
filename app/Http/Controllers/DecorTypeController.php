@@ -18,7 +18,7 @@ class DecorTypeController extends Controller
     }
     public function __construct(Request $request){
         parent::__construct($request);
-        $this->authorizeResource(DecorType::class,Str::snake("DecorType"));
+        // $this->authorizeResource(DecorType::class,Str::snake("DecorType"));
     }
     public function index(Request $request)
     {

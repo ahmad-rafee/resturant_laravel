@@ -18,7 +18,7 @@ class MealController extends Controller
     }
     public function __construct(Request $request){
         parent::__construct($request);
-        $this->authorizeResource(Meal::class,Str::snake("Meal"));
+        // $this->authorizeResource(Meal::class,Str::snake("Meal"));
     }
     public function index(Request $request)
     {

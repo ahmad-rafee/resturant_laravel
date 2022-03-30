@@ -18,7 +18,7 @@ class NotificationController extends Controller
     }
     public function __construct(Request $request){
         parent::__construct($request);
-        $this->authorizeResource(Notification::class,Str::snake("Notification"));
+        // $this->authorizeResource(Notification::class,Str::snake("Notification"));
     }
     public function index(Request $request)
     {
