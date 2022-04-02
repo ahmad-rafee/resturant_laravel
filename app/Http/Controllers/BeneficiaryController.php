@@ -18,7 +18,7 @@ class BeneficiaryController extends Controller
     }
     public function __construct(Request $request){
         parent::__construct($request);
-        $this->authorizeResource(Beneficiary::class,Str::snake("Beneficiary"));
+        // $this->authorizeResource(Beneficiary::class,Str::snake("Beneficiary"));
     }
     public function index(Request $request)
     {

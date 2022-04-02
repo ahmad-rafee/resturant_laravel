@@ -12,7 +12,7 @@ class OrderDetail extends Model
     use HasFactory;
     protected $guarded = [];
     public $timestamps = false;
-
+    protected $with=['meal'];
     public static function createRules($user)
     {
         return  [
@@ -82,6 +82,9 @@ class OrderDetail extends Model
         }
     }
     public function meal(){
-        return $this->belongsTo(Meal::class,'MEL_ID','ORDD_MealID')
+        return $this->belongsTo(Meal::class,'ORDD_MealID','MEL_ID');
     }
+    // public function getMealNameAttribute(){
+    //     return $this->meal()->select(['MEL_ArbName','MEL_EngName','MEL_Logo'])->first();
+    // }
 }

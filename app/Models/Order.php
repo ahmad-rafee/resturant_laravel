@@ -13,6 +13,7 @@ class Order extends Model
     protected $guarded = [];
     public $timestamps = false;
     protected $appends = ['customer_name','table_name'];
+    protected $with=['order_details'];
     public static function createRules($user)
     {
         return  [
@@ -97,5 +98,8 @@ class Order extends Model
     }
     public function getTableNameAttribute(){
         return $this->order_table?->DEC_Name;
+    }
+    public function order_details(){
+        return $this->hasMany(OrderDetail::class,'ORDD_Serial');
     }
 }

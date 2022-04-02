@@ -72,6 +72,6 @@ class Meal extends Model
         return $this->hasOne(Image::class,'IMG_ID','MEL_Logo');
     }
     public function getImageAttribute(){
-        return $this->logo->IMG_DATA;
+        return $this->logo?->IMG_DATA;
     }
 }
