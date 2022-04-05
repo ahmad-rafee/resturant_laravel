@@ -69,6 +69,12 @@ class Order extends Model
         $query->when($request->name, function ($query, $name) use ($locale) {
             $query->where("name->$locale", 'like', "%$name%");
         });
+        $query->when($request->status, function ($query, $status)  {
+            $query->whereIn("ORD_Status",$status);
+        });
+        $query->when($request->ORD_UserSerial, function ($query, $ORD_UserSerial)  {
+            $query->where("ORD_UserSerial",'=',$ORD_UserSerial);
+        });
     }
     public function scopeSort($query, $request)
     {
