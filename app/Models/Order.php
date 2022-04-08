@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -75,8 +76,9 @@ class Order extends Model
         $query->when($request->ORD_UserSerial, function ($query, $ORD_UserSerial)  {
             $query->where("ORD_UserSerial",'=',$ORD_UserSerial);
         });
-        $query->when($request->min_date, function ($query, $min_date)  {
-            $query->where("ORD_StartTime",'>=',$min_date);
+        $query->when($request->today, function ($query, $today)  {
+            $today_date = Carbon::now()->date();
+            $query->where("ORD_StartTime",'>=',$today_date);
         });
     }
     public function scopeSort($query, $request)
