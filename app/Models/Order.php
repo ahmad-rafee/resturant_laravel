@@ -75,6 +75,9 @@ class Order extends Model
         $query->when($request->ORD_UserSerial, function ($query, $ORD_UserSerial)  {
             $query->where("ORD_UserSerial",'=',$ORD_UserSerial);
         });
+        $query->when($request->min_date, function ($query, $min_date)  {
+            $query->where("ORD_StartTime",'>=',$min_date);
+        });
     }
     public function scopeSort($query, $request)
     {
