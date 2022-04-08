@@ -29,7 +29,8 @@ class OrderController extends Controller
     }
     public function store(StoreOrderRequest $request)
     {
-        $last_draft_order = Order::where('ORD_Status', '=', 0)->first();
+        $user = $request->waiter_user;
+        $last_draft_order = Order::where('ORD_Status', '=', 0)->where('ORD_UserSerial','=',$user->U_Serial)->first();
         if (!$last_draft_order)
             $order = Order::create($request->validated());
         else
