@@ -67,4 +67,7 @@ class Waiter extends Model
             }
         }
     }
+    public function user(){
+        return $this->belongsTo(User::class,'WTR_UserID','U_Serial');
+    }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -68,6 +69,16 @@ class Order extends Model
         // $query->orderBy('bills.created_at', 'desc');
         $query->when($request->name, function ($query, $name) use ($locale) {
             $query->where("name->$locale", 'like', "%$name%");
+        });
+        $query->when($request->status, function ($query, $status)  {
+            $query->whereIn("ORD_Status",$status);
+        });
+        $query->when($request->ORD_UserSerial, function ($query, $ORD_UserSerial)  {
+            $query->where("ORD_UserSerial",'=',$ORD_UserSerial);
+        });
+        $query->when($request->today, function ($query, $today)  {
+            $today_date = Carbon::now()->date();
+            $query->where("ORD_StartTime",'>=',$today_date);
         });
     }
     public function scopeSort($query, $request)
