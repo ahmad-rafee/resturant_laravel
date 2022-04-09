@@ -25,7 +25,7 @@ class StoreOrderRequest extends FormRequest
     {
         return [
             'ORD_Type' => 'nullable',
-            'ORD_TableID' => 'required',
+            'ORD_TableID' => 'nullable',
             'ORD_StartTime' => 'nullable',
             'ORD_ReadyAt' => 'nullable',
             'ORD_EndTime' => 'nullable',

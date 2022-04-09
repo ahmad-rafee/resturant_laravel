@@ -193,7 +193,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'C:\\Users\\ahmed\\Desktop\\resturant_laravel\\backend\\storage\\framework/cache/data',
+        'path' => 'D:\\resturant_laravel\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -288,7 +288,7 @@
         'port' => '1433',
         'database' => 'resturant',
         'username' => 'sa',
-        'password' => 'Admin@123',
+        'password' => 'sas',
         'unix_socket' => '',
         'charset' => 'utf8mb4',
         'collation' => 'utf8mb4_unicode_ci',
@@ -308,7 +308,7 @@
         'port' => '1433',
         'database' => 'resturant',
         'username' => 'sa',
-        'password' => 'Admin@123',
+        'password' => 'sas',
         'charset' => 'utf8',
         'prefix' => '',
         'prefix_indexes' => true,
@@ -323,7 +323,7 @@
         'port' => '1433',
         'database' => 'resturant',
         'username' => 'sa',
-        'password' => 'Admin@123',
+        'password' => 'sas',
         'charset' => 'utf8',
         'prefix' => '',
         'prefix_indexes' => true,
@@ -364,12 +364,12 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\Users\\ahmed\\Desktop\\resturant_laravel\\backend\\storage\\app',
+        'root' => 'D:\\resturant_laravel\\storage\\app',
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\Users\\ahmed\\Desktop\\resturant_laravel\\backend\\storage\\app/public',
+        'root' => 'D:\\resturant_laravel\\storage\\app/public',
         'url' => 'http://127.0.0.1:8000/storage',
         'visibility' => 'public',
       ),
@@ -387,7 +387,7 @@
     ),
     'links' => 
     array (
-      'C:\\Users\\ahmed\\Desktop\\resturant_laravel\\backend\\public\\storage' => 'C:\\Users\\ahmed\\Desktop\\resturant_laravel\\backend\\storage\\app/public',
+      'D:\\resturant_laravel\\public\\storage' => 'D:\\resturant_laravel\\storage\\app/public',
     ),
   ),
   'hashing' => 
@@ -422,13 +422,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'C:\\Users\\ahmed\\Desktop\\resturant_laravel\\backend\\storage\\logs/laravel.log',
+        'path' => 'D:\\resturant_laravel\\storage\\logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'C:\\Users\\ahmed\\Desktop\\resturant_laravel\\backend\\storage\\logs/laravel.log',
+        'path' => 'D:\\resturant_laravel\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -479,7 +479,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'C:\\Users\\ahmed\\Desktop\\resturant_laravel\\backend\\storage\\logs/laravel.log',
+        'path' => 'D:\\resturant_laravel\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -545,7 +545,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'C:\\Users\\ahmed\\Desktop\\resturant_laravel\\backend\\resources\\views/vendor/mail',
+        0 => 'D:\\resturant_laravel\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -611,7 +611,7 @@
     'middlewares' => 
     array (
     ),
-    'docs_path' => 'C:\\Users\\ahmed\\Desktop\\resturant_laravel\\backend\\docs/request-docs/',
+    'docs_path' => 'D:\\resturant_laravel\\docs/request-docs/',
     'sort_by' => 'default',
     'only_route_uri_start_with' => '',
     'hide_matching' => 
@@ -619,6 +619,129 @@
       0 => '#^telescope#',
       1 => '#^docs#',
       2 => '#^request-docs#',
+    ),
+    'open_api' => 
+    array (
+      'version' => '3.0.0',
+      'document_version' => '1.0.0',
+      'license' => 'Apache 2.0',
+      'license_url' => 'https://www.apache.org/licenses/LICENSE-2.0.html',
+      'server_url' => 'http://127.0.0.1:8000',
+      'responses' => 
+      array (
+        200 => 
+        array (
+          'description' => 'Successful operation',
+          'content' => 
+          array (
+            'application/json' => 
+            array (
+              'schema' => 
+              array (
+                'type' => 'object',
+              ),
+            ),
+          ),
+        ),
+        400 => 
+        array (
+          'description' => 'Bad Request',
+          'content' => 
+          array (
+            'application/json' => 
+            array (
+              'schema' => 
+              array (
+                'type' => 'object',
+              ),
+            ),
+          ),
+        ),
+        401 => 
+        array (
+          'description' => 'Unauthorized',
+          'content' => 
+          array (
+            'application/json' => 
+            array (
+              'schema' => 
+              array (
+                'type' => 'object',
+              ),
+            ),
+          ),
+        ),
+        403 => 
+        array (
+          'description' => 'Forbidden',
+          'content' => 
+          array (
+            'application/json' => 
+            array (
+              'schema' => 
+              array (
+                'type' => 'object',
+              ),
+            ),
+          ),
+        ),
+        404 => 
+        array (
+          'description' => 'Not Found',
+          'content' => 
+          array (
+            'application/json' => 
+            array (
+              'schema' => 
+              array (
+                'type' => 'object',
+              ),
+            ),
+          ),
+        ),
+        422 => 
+        array (
+          'description' => 'Unprocessable Entity',
+          'content' => 
+          array (
+            'application/json' => 
+            array (
+              'schema' => 
+              array (
+                'type' => 'object',
+              ),
+            ),
+          ),
+        ),
+        500 => 
+        array (
+          'description' => 'Internal Server Error',
+          'content' => 
+          array (
+            'application/json' => 
+            array (
+              'schema' => 
+              array (
+                'type' => 'object',
+              ),
+            ),
+          ),
+        ),
+        'default' => 
+        array (
+          'description' => 'Unexpected error',
+          'content' => 
+          array (
+            'application/json' => 
+            array (
+              'schema' => 
+              array (
+                'type' => 'object',
+              ),
+            ),
+          ),
+        ),
+      ),
     ),
   ),
   'sanctum' => 
@@ -668,7 +791,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'C:\\Users\\ahmed\\Desktop\\resturant_laravel\\backend\\storage\\framework/sessions',
+    'files' => 'D:\\resturant_laravel\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -688,9 +811,9 @@
   array (
     'paths' => 
     array (
-      0 => 'C:\\Users\\ahmed\\Desktop\\resturant_laravel\\backend\\resources\\views',
+      0 => 'D:\\resturant_laravel\\resources\\views',
     ),
-    'compiled' => 'C:\\Users\\ahmed\\Desktop\\resturant_laravel\\backend\\storage\\framework\\views',
+    'compiled' => 'D:\\resturant_laravel\\storage\\framework\\views',
   ),
   'websockets' => 
   array (
@@ -827,8 +950,8 @@
   array (
     'config' => 
     array (
-      'migration_template_path' => 'C:\\Users\\ahmed\\Desktop\\resturant_laravel\\backend\\vendor\\kitloong\\laravel-migrations-generator\\src\\config/../MigrationsGenerator/stub/migration.stub',
-      'migration_target_path' => 'C:\\Users\\ahmed\\Desktop\\resturant_laravel\\backend\\database/migrations',
+      'migration_template_path' => 'D:\\resturant_laravel\\vendor\\kitloong\\laravel-migrations-generator\\src\\config/../MigrationsGenerator/stub/migration.stub',
+      'migration_target_path' => 'D:\\resturant_laravel\\database/migrations',
       'filename_pattern' => 
       array (
         'table' => '[datetime_prefix]_create_[table]_table.php',
