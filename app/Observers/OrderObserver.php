@@ -17,6 +17,7 @@ class OrderObserver
     {
         //
         $order->ORD_StartTime=Carbon::now();
+        $order->ORD_UserSerial=request()->waiter_user->U_Serial;
     }
     public function created(Order $order)
     {

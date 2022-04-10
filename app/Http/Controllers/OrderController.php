@@ -33,8 +33,11 @@ class OrderController extends Controller
         $last_draft_order = Order::where('ORD_Status', '=', 0)->where('ORD_UserSerial','=',$user->U_Serial)->first();
         if (!$last_draft_order)
             $order = Order::create($request->validated());
-        else
-            $order = $last_draft_order->update($request->validated());
+        else{
+
+            $order = $last_draft_order;
+            $order->update($request->validated());
+        }
         if ($request->translations) {
             foreach ($request->translations as $translation)
                 $order->setTranslation($translation['field'], $translation['locale'], $translation['value'])->save();
