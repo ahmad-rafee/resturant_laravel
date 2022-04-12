@@ -77,8 +77,12 @@ class Order extends Model
             $query->where("ORD_UserSerial",'=',$ORD_UserSerial);
         });
         $query->when($request->today, function ($query, $today)  {
-            $today_date = Carbon::now()->date();
+            $today_date = Carbon::now()->toDateString();
             $query->where("ORD_StartTime",'>=',$today_date);
+        });
+        $query->when($request->waiter_id, function ($query, $today)  {
+            $waiter = request()->waiter;
+            $query->where("ORD_UserSerial",'>=',$waiter?->WTR_UserID);
         });
     }
     public function scopeSort($query, $request)
