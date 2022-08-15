@@ -11,6 +11,7 @@ class MealOption extends Model
     use HasFactory;
     protected $guarded = [];
     public $timestamps = false;
+    protected $with = ['option'];
 
     public static function createRules($user)
     {
@@ -49,5 +50,8 @@ class MealOption extends Model
                 }
             }
         }
+    }
+    public function option(){
+        return $this->belongsTo(Option::class,'OPT_ID','OPT_ID');
     }
 }

@@ -14,6 +14,7 @@ class Meal extends Model
     protected $guarded = [];
     public $timestamps = false;
     protected $appends = ['image'];
+    protected $with=['options'];
     public static function createRules($user)
     {
         return  [
@@ -73,5 +74,8 @@ class Meal extends Model
     }
     public function getImageAttribute(){
         return $this->logo?->IMG_DATA;
+    }
+    public function options(){
+        return $this->hasMany(MealOption::class,'MEL_ID','MEL_ID');
     }
 }

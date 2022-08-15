@@ -84,6 +84,9 @@ class OrderDetail extends Model
     public function meal(){
         return $this->belongsTo(Meal::class,'ORDD_MealID','MEL_ID');
     }
+    public function options(){
+        return $this->hasMany(OrderOption::class,'ORDD_Serial','ORDD_Serial');
+    }
     // public function getMealNameAttribute(){
     //     return $this->meal()->select(['MEL_ArbName','MEL_EngName','MEL_Logo'])->first();
     // }
