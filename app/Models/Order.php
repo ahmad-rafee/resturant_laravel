@@ -13,7 +13,7 @@ class Order extends Model
     use HasFactory;
     protected $guarded = [];
     public $timestamps = false;
-    protected $appends = ['customer_name','table_name'];
+    protected $appends = ['customer_name','table_name','items'];
     protected $with=['order_details'];
     public static function createRules($user)
     {
@@ -115,6 +115,9 @@ class Order extends Model
         return $this->order_table?->DEC_Name;
     }
     public function order_details(){
-        return $this->hasMany(OrderDetail::class,'ORDD_Serial');
+        return $this->hasMany(OrderDetail::class,'ORDD_OrderID');
+    }
+    public function getItemsAttribute(){
+        return $this->order_details;
     }
 }

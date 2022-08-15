@@ -34,7 +34,7 @@ class OrderController extends Controller
         if (!$last_draft_order)
             $order = Order::create($request->validated());
         else{
-
+            
             $order = $last_draft_order;
             $order->update($request->validated());
         }
