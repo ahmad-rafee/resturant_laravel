@@ -1,16 +1,16 @@
 <?php return array (
   'app' => 
   array (
-    'name' => 'Resturant',
+    'name' => 'Laravel',
     'env' => 'local',
     'debug' => true,
-    'url' => 'http://127.0.0.1:8000',
+    'url' => 'http://localhost',
     'asset_url' => NULL,
     'timezone' => 'UTC',
     'locale' => 'en',
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
-    'key' => 'base64:k67fXGvVo0Oy5xwo3ggE5HGQiTA6+q3zaF4vi6N3c6o=',
+    'key' => 'base64:aTTK7qrPk3fag/p4FvzWXoQ7VetvWBUYgZ2tplmceEI=',
     'cipher' => 'AES-256-CBC',
     'providers' => 
     array (
@@ -131,15 +131,15 @@
   ),
   'broadcasting' => 
   array (
-    'default' => 'pusher',
+    'default' => 'log',
     'connections' => 
     array (
       'pusher' => 
       array (
         'driver' => 'pusher',
-        'key' => '123',
-        'secret' => '123',
-        'app_id' => '123',
+        'key' => '',
+        'secret' => '',
+        'app_id' => '',
         'options' => 
         array (
           'cluster' => 'mt1',
@@ -193,7 +193,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'D:\\resturant_laravel\\storage\\framework/cache/data',
+        'path' => 'C:\\Users\\acer\\Desktop\\restorant\\resturant_laravel\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -211,7 +211,7 @@
         array (
           0 => 
           array (
-            'host' => 'memcached',
+            'host' => '127.0.0.1',
             'port' => 11211,
             'weight' => 100,
           ),
@@ -237,7 +237,7 @@
         'driver' => 'octane',
       ),
     ),
-    'prefix' => 'resturant_cache',
+    'prefix' => 'laravel_cache',
   ),
   'cors' => 
   array (
@@ -336,12 +336,12 @@
       'options' => 
       array (
         'cluster' => 'redis',
-        'prefix' => 'resturant_database_',
+        'prefix' => 'laravel_database_',
       ),
       'default' => 
       array (
         'url' => NULL,
-        'host' => 'redis',
+        'host' => '127.0.0.1',
         'password' => NULL,
         'port' => '6379',
         'database' => '0',
@@ -349,7 +349,7 @@
       'cache' => 
       array (
         'url' => NULL,
-        'host' => 'redis',
+        'host' => '127.0.0.1',
         'password' => NULL,
         'port' => '6379',
         'database' => '1',
@@ -364,13 +364,13 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'D:\\resturant_laravel\\storage\\app',
+        'root' => 'C:\\Users\\acer\\Desktop\\restorant\\resturant_laravel\\storage\\app',
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'D:\\resturant_laravel\\storage\\app/public',
-        'url' => 'http://127.0.0.1:8000/storage',
+        'root' => 'C:\\Users\\acer\\Desktop\\restorant\\resturant_laravel\\storage\\app/public',
+        'url' => 'http://localhost/storage',
         'visibility' => 'public',
       ),
       's3' => 
@@ -387,7 +387,7 @@
     ),
     'links' => 
     array (
-      'D:\\resturant_laravel\\public\\storage' => 'D:\\resturant_laravel\\storage\\app/public',
+      'C:\\Users\\acer\\Desktop\\restorant\\resturant_laravel\\public\\storage' => 'C:\\Users\\acer\\Desktop\\restorant\\resturant_laravel\\storage\\app/public',
     ),
   ),
   'hashing' => 
@@ -407,7 +407,7 @@
   'logging' => 
   array (
     'default' => 'stack',
-    'deprecations' => 'null',
+    'deprecations' => NULL,
     'channels' => 
     array (
       'stack' => 
@@ -422,13 +422,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'D:\\resturant_laravel\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\acer\\Desktop\\restorant\\resturant_laravel\\storage\\logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'D:\\resturant_laravel\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\acer\\Desktop\\restorant\\resturant_laravel\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -479,7 +479,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'D:\\resturant_laravel\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\acer\\Desktop\\restorant\\resturant_laravel\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -491,11 +491,11 @@
       'smtp' => 
       array (
         'transport' => 'smtp',
-        'host' => '',
-        'port' => '587',
-        'encryption' => 'tls',
-        'username' => '',
-        'password' => '',
+        'host' => 'mailhog',
+        'port' => '1025',
+        'encryption' => NULL,
+        'username' => NULL,
+        'password' => NULL,
         'timeout' => NULL,
         'auth_mode' => NULL,
       ),
@@ -537,21 +537,21 @@
     ),
     'from' => 
     array (
-      'address' => '',
-      'name' => 'Resturant',
+      'address' => 'hello@example.com',
+      'name' => 'Laravel',
     ),
     'markdown' => 
     array (
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'D:\\resturant_laravel\\resources\\views/vendor/mail',
+        0 => 'C:\\Users\\acer\\Desktop\\restorant\\resturant_laravel\\resources\\views/vendor/mail',
       ),
     ),
   ),
   'queue' => 
   array (
-    'default' => 'database',
+    'default' => 'sync',
     'connections' => 
     array (
       'sync' => 
@@ -611,7 +611,7 @@
     'middlewares' => 
     array (
     ),
-    'docs_path' => 'D:\\resturant_laravel\\docs/request-docs/',
+    'docs_path' => 'C:\\Users\\acer\\Desktop\\restorant\\resturant_laravel\\docs/request-docs/',
     'sort_by' => 'default',
     'only_route_uri_start_with' => '',
     'hide_matching' => 
@@ -626,7 +626,7 @@
       'document_version' => '1.0.0',
       'license' => 'Apache 2.0',
       'license_url' => 'https://www.apache.org/licenses/LICENSE-2.0.html',
-      'server_url' => 'http://127.0.0.1:8000',
+      'server_url' => 'http://localhost',
       'responses' => 
       array (
         200 => 
@@ -753,7 +753,7 @@
       2 => '127.0.0.1',
       3 => '127.0.0.1:8000',
       4 => '::1',
-      5 => '127.0.0.1',
+      5 => 'localhost',
     ),
     'guard' => 
     array (
@@ -791,7 +791,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'D:\\resturant_laravel\\storage\\framework/sessions',
+    'files' => 'C:\\Users\\acer\\Desktop\\restorant\\resturant_laravel\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -800,7 +800,7 @@
       0 => 2,
       1 => 100,
     ),
-    'cookie' => 'resturant_session',
+    'cookie' => 'laravel_session',
     'path' => '/',
     'domain' => NULL,
     'secure' => NULL,
@@ -811,9 +811,9 @@
   array (
     'paths' => 
     array (
-      0 => 'D:\\resturant_laravel\\resources\\views',
+      0 => 'C:\\Users\\acer\\Desktop\\restorant\\resturant_laravel\\resources\\views',
     ),
-    'compiled' => 'D:\\resturant_laravel\\storage\\framework\\views',
+    'compiled' => 'C:\\Users\\acer\\Desktop\\restorant\\resturant_laravel\\storage\\framework\\views',
   ),
   'websockets' => 
   array (
@@ -825,10 +825,10 @@
     array (
       0 => 
       array (
-        'id' => '123',
-        'name' => 'Resturant',
-        'key' => '123',
-        'secret' => '123',
+        'id' => '',
+        'name' => 'Laravel',
+        'key' => '',
+        'secret' => '',
         'path' => NULL,
         'capacity' => NULL,
         'enable_client_messages' => false,
@@ -950,8 +950,8 @@
   array (
     'config' => 
     array (
-      'migration_template_path' => 'D:\\resturant_laravel\\vendor\\kitloong\\laravel-migrations-generator\\src\\config/../MigrationsGenerator/stub/migration.stub',
-      'migration_target_path' => 'D:\\resturant_laravel\\database/migrations',
+      'migration_template_path' => 'C:\\Users\\acer\\Desktop\\restorant\\resturant_laravel\\vendor\\kitloong\\laravel-migrations-generator\\src\\config/../MigrationsGenerator/stub/migration.stub',
+      'migration_target_path' => 'C:\\Users\\acer\\Desktop\\restorant\\resturant_laravel\\database/migrations',
       'filename_pattern' => 
       array (
         'table' => '[datetime_prefix]_create_[table]_table.php',
@@ -1054,6 +1054,7 @@
     'log_profile' => 'Spatie\\HttpLogger\\LogNonGetRequests',
     'log_writer' => 'Spatie\\HttpLogger\\DefaultLogWriter',
     'log_channel' => 'stack',
+    'log_level' => 'info',
     'except' => 
     array (
       0 => 'password',
@@ -1067,10 +1068,10 @@
   ),
   'laravel-swagger' => 
   array (
-    'title' => 'Resturant',
+    'title' => 'Laravel',
     'description' => '',
     'appVersion' => '1.0.0',
-    'host' => 'http://127.0.0.1:8000',
+    'host' => 'http://localhost',
     'basePath' => '/',
     'schemes' => 
     array (
@@ -1091,7 +1092,7 @@
   ),
   'jwt' => 
   array (
-    'secret' => 'cKvTcYsaOpJfpxU70xDI1OcK0A1NsvfuSOraLy1Z5KZ4YKz5TVOTgL1BiaT4Cefo',
+    'secret' => '2u2nKbvuFAe8a5jhCtdCughlNzV6zcoNut6wYVMFVUMXbkbYONxCH3lM9HF9cNUX',
     'keys' => 
     array (
       'public' => NULL,
