@@ -34,6 +34,7 @@ class OrderObserver
      */
     public function updated(Order $order)
     {
+        // logger("test");
         if ($order->isDirty("ORD_Status")) {
             // dd($order);
             if ($order->ORD_Status == 10) {
