@@ -34,6 +34,7 @@ class AuthController extends BaseController
      */
     public function login(UserLoginRequest $request)
     {
+        logger("test ;oigom");
         // $user = User::where('U_Name', '=', $request->U_Name)->first();
         $waiter_id = null;
         $pin = $request->WaiterPIN;

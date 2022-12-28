@@ -18,6 +18,7 @@ class WaiterIdentifier
      */
     public function handle(Request $request, Closure $next)
     {
+
         if ($token = $request->header('WAITER_TOKEN')) {
             $waiter_id = Crypt::decrypt($token);
             $waiter = Waiter::find($waiter_id);
@@ -25,6 +26,7 @@ class WaiterIdentifier
             $request->request->add(['waiter' => $waiter]);
             $request->request->add(['waiter_user' => $waiter->user]);
         }
+
         return $next($request);
     }
 }

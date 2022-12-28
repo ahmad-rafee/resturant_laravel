@@ -13,8 +13,8 @@ class Order extends Model
     use HasFactory;
     protected $guarded = [];
     public $timestamps = false;
-    protected $appends = ['customer_name','table_name','items'];
-    protected $with=['order_details'];
+    protected $appends = ['customer_name', 'table_name', 'items'];
+    protected $with = ['order_details'];
     public static function createRules($user)
     {
         return  [
@@ -70,19 +70,19 @@ class Order extends Model
         $query->when($request->name, function ($query, $name) use ($locale) {
             $query->where("name->$locale", 'like', "%$name%");
         });
-        $query->when($request->status, function ($query, $status)  {
-            $query->whereIn("ORD_Status",$status);
+        // $query->when($request->status, function ($query, $status) {
+        $query->whereIn("ORD_Status", [10, 7, 20]);
+        // });
+        $query->when($request->ORD_UserSerial, function ($query, $ORD_UserSerial) {
+            $query->where("ORD_UserSerial", '=', $ORD_UserSerial);
         });
-        $query->when($request->ORD_UserSerial, function ($query, $ORD_UserSerial)  {
-            $query->where("ORD_UserSerial",'=',$ORD_UserSerial);
-        });
-        $query->when($request->today, function ($query, $today)  {
-            $today_date = Carbon::now()->toDateString();
-            $query->where("ORD_StartTime",'>=',$today_date);
-        });
-        $query->when($request->waiter_id, function ($query, $today)  {
+        // $query->when($request->today, function ($query, $today) {
+        $today_date = Carbon::now()->toDateString();
+        $query->where("ORD_StartTime", '>=', $today_date);
+        // });
+        $query->when($request->waiter_id, function ($query, $today) {
             $waiter = request()->waiter;
-            $query->where("ORD_UserSerial",'>=',$waiter?->WTR_UserID);
+            $query->where("ORD_UserSerial", '>=', $waiter?->WTR_UserID);
         });
     }
     public function scopeSort($query, $request)
@@ -103,21 +103,31 @@ class Order extends Model
     }
     public function beneficiary()
     {
-        return $this->belongsTo(Beneficiary::class, 'ORD_CustomerID','BEN_No');
+        return $this->belongsTo(Beneficiary::class, 'ORD_CustomerID', 'BEN_No');
     }
-    public function order_table(){
-        return $this->belongsTo(HallDecor::class,'ORD_TableID','DEC_ID');
+    public function order_table()
+    {
+        return $this->belongsTo(HallDecor::class, 'ORD_TableID', 'DEC_ID');
     }
-    public function getCustomerNameAttribute(){
+    public function getCustomerNameAttribute()
+    {
         return $this->beneficiary?->BEN_Name;
     }
-    public function getTableNameAttribute(){
+    public function getTableNameAttribute()
+    {
         return $this->order_table?->DEC_Name;
     }
-    public function order_details(){
-        return $this->hasMany(OrderDetail::class,'ORDD_OrderID');
+    public function order_details()
+    {
+        return $this->hasMany(OrderDetail::class, 'ORDD_OrderID');
     }
-    public function getItemsAttribute(){
+    // public function waiter() 
+    // {
+
+    //     return $this->hasMany(OrderDetail::class, 'ORDD_OrderID');
+    // }
+    public function getItemsAttribute()
+    {
         return $this->order_details;
     }
 }

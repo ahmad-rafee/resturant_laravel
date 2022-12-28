@@ -10,7 +10,7 @@
     'locale' => 'en',
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
-    'key' => 'base64:aTTK7qrPk3fag/p4FvzWXoQ7VetvWBUYgZ2tplmceEI=',
+    'key' => 'base64:tkSnMCyCrqxufOolEFIDFJEW/HGI2SXGsXpm/9OvcX4=',
     'cipher' => 'AES-256-CBC',
     'providers' => 
     array (
@@ -193,7 +193,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'C:\\Users\\acer\\Desktop\\restorant\\resturant_laravel\\storage\\framework/cache/data',
+        'path' => 'C:\\Users\\acer\\Desktop\\allfiles\\RESTURANT\\resturant_laravel\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -364,12 +364,12 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\Users\\acer\\Desktop\\restorant\\resturant_laravel\\storage\\app',
+        'root' => 'C:\\Users\\acer\\Desktop\\allfiles\\RESTURANT\\resturant_laravel\\storage\\app',
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\Users\\acer\\Desktop\\restorant\\resturant_laravel\\storage\\app/public',
+        'root' => 'C:\\Users\\acer\\Desktop\\allfiles\\RESTURANT\\resturant_laravel\\storage\\app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
       ),
@@ -387,7 +387,7 @@
     ),
     'links' => 
     array (
-      'C:\\Users\\acer\\Desktop\\restorant\\resturant_laravel\\public\\storage' => 'C:\\Users\\acer\\Desktop\\restorant\\resturant_laravel\\storage\\app/public',
+      'C:\\Users\\acer\\Desktop\\allfiles\\RESTURANT\\resturant_laravel\\public\\storage' => 'C:\\Users\\acer\\Desktop\\allfiles\\RESTURANT\\resturant_laravel\\storage\\app/public',
     ),
   ),
   'hashing' => 
@@ -422,13 +422,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'C:\\Users\\acer\\Desktop\\restorant\\resturant_laravel\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\acer\\Desktop\\allfiles\\RESTURANT\\resturant_laravel\\storage\\logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'C:\\Users\\acer\\Desktop\\restorant\\resturant_laravel\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\acer\\Desktop\\allfiles\\RESTURANT\\resturant_laravel\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -479,7 +479,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'C:\\Users\\acer\\Desktop\\restorant\\resturant_laravel\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\acer\\Desktop\\allfiles\\RESTURANT\\resturant_laravel\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -545,7 +545,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'C:\\Users\\acer\\Desktop\\restorant\\resturant_laravel\\resources\\views/vendor/mail',
+        0 => 'C:\\Users\\acer\\Desktop\\allfiles\\RESTURANT\\resturant_laravel\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -611,7 +611,7 @@
     'middlewares' => 
     array (
     ),
-    'docs_path' => 'C:\\Users\\acer\\Desktop\\restorant\\resturant_laravel\\docs/request-docs/',
+    'docs_path' => 'C:\\Users\\acer\\Desktop\\allfiles\\RESTURANT\\resturant_laravel\\docs/request-docs/',
     'sort_by' => 'default',
     'only_route_uri_start_with' => '',
     'hide_matching' => 
@@ -791,7 +791,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'C:\\Users\\acer\\Desktop\\restorant\\resturant_laravel\\storage\\framework/sessions',
+    'files' => 'C:\\Users\\acer\\Desktop\\allfiles\\RESTURANT\\resturant_laravel\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -811,9 +811,9 @@
   array (
     'paths' => 
     array (
-      0 => 'C:\\Users\\acer\\Desktop\\restorant\\resturant_laravel\\resources\\views',
+      0 => 'C:\\Users\\acer\\Desktop\\allfiles\\RESTURANT\\resturant_laravel\\resources\\views',
     ),
-    'compiled' => 'C:\\Users\\acer\\Desktop\\restorant\\resturant_laravel\\storage\\framework\\views',
+    'compiled' => 'C:\\Users\\acer\\Desktop\\allfiles\\RESTURANT\\resturant_laravel\\storage\\framework\\views',
   ),
   'websockets' => 
   array (
@@ -950,8 +950,8 @@
   array (
     'config' => 
     array (
-      'migration_template_path' => 'C:\\Users\\acer\\Desktop\\restorant\\resturant_laravel\\vendor\\kitloong\\laravel-migrations-generator\\src\\config/../MigrationsGenerator/stub/migration.stub',
-      'migration_target_path' => 'C:\\Users\\acer\\Desktop\\restorant\\resturant_laravel\\database/migrations',
+      'migration_template_path' => 'C:\\Users\\acer\\Desktop\\allfiles\\RESTURANT\\resturant_laravel\\vendor\\kitloong\\laravel-migrations-generator\\src\\config/../MigrationsGenerator/stub/migration.stub',
+      'migration_target_path' => 'C:\\Users\\acer\\Desktop\\allfiles\\RESTURANT\\resturant_laravel\\database/migrations',
       'filename_pattern' => 
       array (
         'table' => '[datetime_prefix]_create_[table]_table.php',

@@ -4,6 +4,8 @@ namespace App\Observers;
 
 use App\Models\Order;
 use App\Models\TempTable;
+use App\Models\User;
+use App\Models\Waiter;
 use Carbon\Carbon;
 
 class OrderObserver
@@ -34,11 +36,13 @@ class OrderObserver
      */
     public function updated(Order $order)
     {
+        logger("hello from observer");
         if ($order->isDirty("ORD_Status")) {
             // dd($order);
             if ($order->ORD_Status == 10) {
+                $WTR_ID = Waiter::where('WTR_UserID', $order->ORD_UserSerial)->first()->WTR_ID;
                 $temp_table = TempTable::create([
-                    'TMP_Type' => $order->ORD_Type,
+                    'TMP_Type' => 1,
                     'TMP_TableID' => $order->ORD_TableID,
                     'TMP_OpenTime' => $order->ORD_StartTime,
                     'TMP_CustomerID' => $order->ORD_CustomerID,
@@ -49,7 +53,7 @@ class OrderObserver
                     'TMP_UserID' => $order->ORD_UserSerial,
                     'TMP_NOTES' => $order->ORD_NOTES,
                     'TMP_OrderID' => $order->ORD_ID,
-                    'TMP_WaiterID' => $order->ORD_UserSerial
+                    'TMP_WaiterID' => $WTR_ID
 
                 ]);
             }
